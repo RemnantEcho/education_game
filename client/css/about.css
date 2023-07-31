@@ -1,0 +1,129 @@
+* {
+    margin: 0 0 0 0;
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: green;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: inline-block;
+    color: wheat;
+    text-align: center;
+    padding: 10px 14px;
+    text-decoration: none;
+  }
+.mission h1 {
+    font-size: 75px;
+    color:white;
+    font-family: 'Gaegu', cursive;
+}
+.mission h2 {
+    font-family: 'Gaegu', cursive;
+    color: white;
+}
+ .mission p {
+    font-size: 20px;
+    width: 50%;
+    font-family: 'Gaegu', cursive;
+    margin: 0;
+    padding:0;
+    color:white;
+    
+  }
+  .emphasis {
+    color:wheat;
+    font-weight: bold;
+  }
+
+.about-us {
+    width: 25%;
+    color: white;
+}
+  .mission {
+    
+   border-bottom: black;
+    position: relative;
+    background: url(/client/assets/blackboard-background.jpg) repeat top center/cover;  
+    background-position: 90%;
+    height:600px;
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.9rem;
+}
+  .right {
+    float:right;
+  }
+
+.people {
+    margin:50px;
+    font-weight: bold;
+    font-family: 'Lobster', cursive;
+    color: #990F02;
+    margin: 10px;
+    font-size: 35px;
+}
+.research {
+  display: flex;
+    margin: 10px;
+    width: 100%;
+}
+h2 {
+    color: #990F02;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 75px;
+    font-family: 'Lobster', cursive;
+    padding: 0px 10px 0px 10px;
+    position: relative;
+    text-align: center;
+
+} 
+ .research h3 {
+    padding: 0px 10px 0px 10px;
+    position: relative;
+    text-align: center;
+    display: flex;
+
+} 
+
+
+.research .quote {
+    font-style: italic;
+    margin: 40px;
+    padding: 20px 10px 30px 0px;
+    display: flex;
+    width: 80%;
+    position: relative;
+    text-align: center;
+    color: #808080
+}
+
+.student-wrapper {
+    width: 33.3%;
+}
+
+.parent-wrapper {
+    width: 33.3%
+}
+
+.teacher-wrapper {
+    width: 33.3%;
+}
+
+  #logo {
+    text-align: center;
+    color: green;
+}
+ 
