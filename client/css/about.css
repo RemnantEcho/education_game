@@ -1,8 +1,4 @@
-* {
-    margin: 0 0 0 0;
-    font-family: 'Roboto Condensed', sans-serif;
 
-}
 ul {
     list-style-type: none;
     margin: 0;
@@ -53,7 +49,7 @@ ul {
     
    border-bottom: black;
     position: relative;
-    background: url(/client/assets/blackboard-background.jpg) repeat top center/cover;  
+    background: url('../assets/blackboard-background.jpg') repeat top center/cover;  
     background-position: 90%;
     height:600px;
     display:inline-flex;
