@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap'); */
 
 html, body {
     margin: 0;
@@ -7,54 +7,6 @@ html, body {
     height: 100%;
     font-family: 'Inter', sans-serif;
     overflow: hidden;
-}
-
-
-nav {
-    width: 100%;
-    height: 50px;
-    display: flex;
-}
-
-#nav-left-buttons {
-    display: flex;
-    justify-items: flex-start;
-    width: 40%;
-    height: 100%;
-    /* background-color: #ddaadd; */
-}
-
-#nav-center {
-    display: flex;
-    justify-items: center;
-    width: 20%;
-    height: 100%;
-    /* background-color: #99aa55; */
-}
-
-#nav-right-buttons {
-    display: flex;
-    justify-items: flex-end;
-    width: 40%;
-    height: 100%;
-    flex-direction: row-reverse;
-    /* background-color: #763d76; */
-}
-
-#title {
-    margin: 0;
-    color: #fff;
-    font-size: 1.35rem;
-    font-weight: bold;
-}
-
-.nav-button {
-    display: flex;
-}
-
-main {
-    width: 100%;
-    height: calc(100% - 50px);
 }
 
 #subject-banner {
@@ -194,101 +146,4 @@ main {
     margin-left: auto;
 }
 
-.nav-icon {
-    width: 25px;
-    height: 100%;
-    /* object-fit: cover; */
-    background-position-y: 50%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: background-image .3s;
-    margin: 0 16px;
-}
 
-.dropdown-item {
-    display: flex;
-    /* align-content: flex-start; */
-    width: 100px;
-    height: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: #fff;
-    transition: background-color .4s;
-}
-
-.dropdown-item:hover {
-    background-color: #89b35f;
-    /* color: #ededed; */
-}
-
-.dropdown-hover:visited {
-    color: #fff;
-}
-
-.dropdown-icon {
-    width: 25px;
-    height: 25px;
-    object-fit: cover;
-    /* background-size: cover; */
-    /* transition: background-image .3s; */
-    margin: 0 16px;
-}
-
-.dropdown-bar {
-    display: flex;
-    position: absolute;
-    height: 70px;
-    width: 100%;
-    z-index: 1;
-    flex-direction: row;
-    padding: 0 2%;
-}
-
-#home-icon {
-    margin-left: 5%;
-    background-image: url('../assets/home-icon.png');
-}
-
-#home-icon:hover {
-    background-image: url('../assets/home-icon-hover.png');
-}
-
-#subject-icon {
-    background-image: url('../assets/subject-icon.png');
-}
-
-#subject-icon:hover {
-    background-image: url('../assets/subject-icon-hover.png');
-}
-
-#about-icon {
-    background-image: url('../assets/about-icon.png');
-}
-
-#about-icon:hover {
-    background-image: url('../assets/about-icon-hover.png');
-}
-
-#account-icon {
-    margin-right: 5%;
-    background-image: url('../assets/account-icon.png');
-}
-
-#account-icon:hover {
-    background-image: url('../assets/account-icon-hover.png');
-}
-
-.hide {
-    display: none;
-}
-
-.center-horizontal {
-    justify-content: center;
-}
-
-.center-vertical {
-    align-items: center;
-    
-}
