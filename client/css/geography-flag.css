@@ -1,0 +1,256 @@
+main {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+#start-menu {
+    flex-direction: column;
+    align-items: center;
+}
+
+#start-title {
+    margin: 0;
+    font-size: 1.75rem;
+}
+
+#start-subject {
+    margin: 10% 0 50% 0;
+    font-size: 1.5rem;
+}
+
+#start-button {
+    width: 150px;
+    height: 50px;
+    border: none;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#quiz-menu {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#quiz-elements {
+    position: absolute;
+    top: 4%;
+    right: 3%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#quiz-counter {
+    font-size: 1.2rem;
+}
+
+#quiz-info {
+    width: 40px;
+    height: 40px;
+    border: none;
+    color: #fff;
+    clip-path: ellipse(50% 50%);
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+#quiz-question {
+    font-size: 1.6rem;
+    margin: 5% auto 2% auto;
+}
+
+#flag-image {
+    background-color: #434343;
+    object-fit: cover;
+    margin: 2% auto 5% auto;
+    height: 30%;
+}
+
+.quiz-question-buttons {
+    
+}
+
+.question-button {
+    width: 175px;
+    height: 50px;
+    border: solid 3px #A0D26F;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    background-color: #fff;
+    transition: background-color .4s;
+    font-size: 1.2rem;
+}
+
+.question-button:hover {
+    background-color: #A0D26F;
+}
+
+.question-button-selected {
+    background-color:#A0D26F;
+}
+
+.hint-button {
+    width: 150px;
+    height: 50px;
+    border: none;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3rem;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 3% auto 5% auto;
+}
+
+.quiz-next-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#overlay-content {
+    padding: 32px;
+    width: 300px;
+    background-color: #fff;
+    flex-direction: column;
+    /* height: 360px; */
+}
+
+.quiz-display {
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+}
+
+.quiz-filler {
+    margin-top: auto;
+}
+
+.geography-scroll::-webkit-scrollbar {
+    width: 15px;
+    
+}
+
+.geography-scroll::-webkit-scrollbar-track {
+    background: #E7E7E7;
+    border-radius: 5px;
+}
+   
+
+.geography-scroll::-webkit-scrollbar-thumb {
+    background: #A0D26F;
+    border-radius: 5px;
+}
+  
+
+.geography-scroll::-webkit-scrollbar-thumb:hover {
+    background: #89b35f; 
+}
+
+.geography-text {
+    color: #A0D26F;
+}
+
+.geography-bg {
+    background-color: #A0D26F;
+}
+
+.geography-dropdown-bg {
+    background-color: #97c46b;
+}
+
+.geography-item {
+    display: flex;
+    height: 60px;
+    width: calc(100% - 6px);
+    border: solid 3px #A0D26F;
+    border-radius: 10px;
+    font-size: 1.0rem;
+    color: #000;
+    transition: background-color .5s;
+}
+
+.geography-dropdown-item {
+    background-color: #97c46b;
+    /* color: #ededed; */
+}
+
+.geography-dropdown-item:hover {
+    background-color: #89b35f; 
+    /* color: #ededed; */
+}
+
+/* .geography-item:hover {
+    background-color: #ededed;
+} */
+
+.geography-nav-icon {
+    background-color: #A0D26F;
+}
+
+.geography-button {
+    background-color: #A0D26F;
+}
+
+.geography-button:hover {
+    background-color: #97c46b
+}
+
+.flex-display {
+    display: flex;
+}
+
+.info-header {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 5% auto 5% auto;
+}
+
+.fact-header {
+    font-size: 1.0rem;
+    margin: 6% 0 0 0;
+}
+
+.info-text {
+    color: #000;
+    font-size: 1.0rem;
+}
+
+.next-button {
+    width: 150px;
+    height: 50px;
+    border: none;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3rem;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 18% auto 5% auto;
+}
+
+.okay-button {
+    width: 150px;
+    height: 50px;
+    border: none;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3rem;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 5% auto 5% auto;
+}
+
+.hide {
+    display: none;
+}

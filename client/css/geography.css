@@ -46,11 +46,12 @@ html, body {
 
 .geography-scroll::-webkit-scrollbar {
     width: 15px;
+    
 }
 
 .geography-scroll::-webkit-scrollbar-track {
     background: #E7E7E7;
-    border-radius: 5px; 
+    border-radius: 5px;
 }
    
 
@@ -81,6 +82,16 @@ html, body {
     font-size: 1.0rem;
     color: #000;
     transition: background-color .5s;
+}
+
+.geography-dropdown-item {
+    background-color: #97c46b;
+    /* color: #ededed; */
+}
+
+.geography-dropdown-item:hover {
+    background-color: #89b35f; 
+    /* color: #ededed; */
 }
 
 /* .geography-item:hover {
@@ -146,4 +157,6 @@ html, body {
     margin-left: auto;
 }
 
-
+.hide {
+    display: none;
+}

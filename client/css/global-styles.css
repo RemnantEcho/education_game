@@ -99,7 +99,7 @@ main {
     display: flex;
     position: absolute;
     height: 70px;
-    width: 100%;
+    width: 96%;
     z-index: 1;
     flex-direction: row;
     padding: 0 2%;
@@ -150,10 +150,6 @@ main {
 .default-dropdown-item:hover {
     background-color: #a87332;
     /* color: #ededed; */
-}
-
-.hide {
-    display: none;
 }
 
 .center-horizontal {
