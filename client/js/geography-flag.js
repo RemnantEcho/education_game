@@ -13,6 +13,7 @@ const flagImage = document.querySelector('#flag-image');
 const quizCounter = document.querySelector('#quiz-counter');
 const endTitle = document.querySelector('#end-title');
 const scoreText = document.querySelector('#score-text');
+const restartButton = document.querySelector('#restart-button');
 
 
 let gameState = {
@@ -93,7 +94,8 @@ const fetchFlags = () => {
 
 const evaluateScore = () => {
     if ((scoreCount / questionCount) * 100 >= 70) return `Great Job! You Passed!`;
-    return `Next time revise harder!`; 
+    if ((scoreCount / questionCount) * 100 < 30) return `Next time revise Harder!`; 
+    return `Better Luck Next Time!`; 
 }
 
 const displayButtons = (n) => {
@@ -185,9 +187,6 @@ const displayResultOverlay = (val) => {
         nextButton.textContent = "Next";
         nextButton.addEventListener('click', goNextOverlay);
     }
-    
-
-    
 
     overlayContent.textContent = "";
     overlayContent.appendChild(displayHeader);
@@ -273,19 +272,23 @@ const checkCorrect = (e) => {
 }
 
 const roundHandler = () => {
+    // console.log('Triggered');
     if (flags.length != 0) {
         switch(currentState) {
             case gameState.idle:
+                currentState = gameState.playing;
                 startMenu.classList.add('hide');
                 quizMenu.classList.remove('hide');
             break;
             case gameState.playing:
+                currentState = gameState.idle;
+                // console.log('Playing');
                 quizMenu.classList.add('hide');
                 summaryMenu.classList.remove('hide');
                 quizNextOverlay.classList.add('hide');
 
                 endTitle.textContent = evaluateScore();
-                scoreText.textContent = `You scored `;
+                scoreText.textContent = `You scored ${scoreCount} / ${questionCount}`;
             break;
         }
     }
@@ -298,7 +301,9 @@ const startGame = (e) => {
 }
 
 
-const restart = () => {
+const restart = (e) => {
+    e.preventDefault();
+
     currentState = gameState.idle;
     questionCount = 1;
     scoreCount = 0;
@@ -329,10 +334,16 @@ const init = () => {
     flagImage.src = flags[questionCount - 1].image;
     displayButtons(2);
 
+    // Remove after
+    endTitle.textContent = evaluateScore();
+    scoreText.textContent = `You Scored: ${scoreCount} / ${flags.length}`;
+    //
+
     quizCounter.textContent = `${questionCount}/${flags.length}`;
     startButton.addEventListener('click', startGame);
     quizInfo.addEventListener('click', displayInfoOverlay);
     hintButton.addEventListener('click', displayHintOverlay);
+    restartButton.addEventListener('click', restart);
 
     for (let i = 0; i < questionButtons.length; i++) {
         questionButtons[i].addEventListener('click', checkCorrect);
