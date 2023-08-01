@@ -11,6 +11,8 @@ const hintButton = document.querySelector('#hint-button');
 const quizQuestion = document.querySelector('#quiz-question');
 const flagImage = document.querySelector('#flag-image');
 const quizCounter = document.querySelector('#quiz-counter');
+const endTitle = document.querySelector('#end-title');
+const scoreText = document.querySelector('#score-text');
 
 
 let gameState = {
@@ -29,64 +31,69 @@ const fetchFlags = () => {
 
     flags = [{
             "name": "Peru",
-            "image": "../assets/peru-flag.png",
+            "image": "./assets/peru-flag.png",
             "hint": "A Hint of Some Kind",
             "fact": "A Fun Fact that's fun for all the family"
         },
         {
             "name": "Egypt",
-            "image": "../assets/egpt-flag.png",
+            "image": "./assets/egypt-flag.png",
             "hint": "A Hint of Some Kind",
             "fact": "A Fun Fact that's fun for all the family"
         },
         {
             "name": "Australia",
-            "image": "../assets/australia-flag.png",
+            "image": "./assets/australia-flag.png",
             "hint": "A Hint of Some Kind",
             "fact": "A Fun Fact that's fun for all the family"
         },
         {
             "name": "Austria",
-            "image": "../assets/austria-flag.png",
+            "image": "./assets/austria-flag.png",
             "hint": "A Hint of Some Kind",
             "fact": "A Fun Fact that's fun for all the family"
         },
         {
             "name": "Taiwan",
-            "image": "../assets/taiwan-flag.png",
+            "image": "./assets/taiwan-flag.png",
             "hint": "A Hint of Some Kind",
             "fact": "A Fun Fact that's fun for all the family"
         },
         {
             "name": "Burma",
-            "image": "../assets/burma-flag.png",
+            "image": "./assets/burma-flag.png",
             "hint": "A Hint of Some Kind",
             "fact": "A Fun Fact that's fun for all the family"
         },{
             "name": "Mexico",
-            "image": "../assets/mexico-flag.png",
+            "image": "./assets/mexico-flag.png",
             "hint": "A Hint of Some Kind",
             "fact": "A Fun Fact that's fun for all the family"
         }
         ,{
             "name": "Argentina",
-            "image": "../assets/argentina-flag.png",
+            "image": "./assets/argentina-flag.png",
             "hint": "A Hint of Some Kind",
             "fact": "A Fun Fact that's fun for all the family"
         }
         ,{
             "name": "Laos",
-            "image": "../assets/laos-flag.png",
+            "image": "./assets/laos-flag.png",
             "hint": "A Hint of Some Kind",
             "fact": "A Fun Fact that's fun for all the family"
         },
         {
             "name": "Cambodia",
-            "image": "../assets/cambodia-flag.png",
+            "image": "./assets/cambodia-flag.png",
             "hint": "A Hint of Some Kind",
             "fact": "A Fun Fact that's fun for all the family"
         }
     ]
+}
+
+const evaluateScore = () => {
+    if ((scoreCount / questionCount) * 100 >= 70) return `Great Job! You Passed!`;
+    return `Next time revise harder!`; 
 }
 
 const displayButtons = (n) => {
@@ -113,9 +120,7 @@ const displayButtons = (n) => {
 
 const closeOverlay = (e) => {
     e.preventDefault();
-    
     quizNextOverlay.classList.add('hide');
-
 }
 
 const goNextOverlay = (e) => {
@@ -126,6 +131,7 @@ const goNextOverlay = (e) => {
     displayButtons(2);
 
     quizCounter.textContent = `${questionCount}/${flags.length}`;
+    flagImage.src = flags[questionCount - 1].image;
 
     quizNextOverlay.classList.add('hide');
 
@@ -276,6 +282,10 @@ const roundHandler = () => {
             case gameState.playing:
                 quizMenu.classList.add('hide');
                 summaryMenu.classList.remove('hide');
+                quizNextOverlay.classList.add('hide');
+
+                endTitle.textContent = evaluateScore();
+                scoreText.textContent = `You scored `;
             break;
         }
     }
@@ -299,16 +309,12 @@ const restart = () => {
 
     displayButtons(2);
     quizCounter.textContent = `${questionCount}/${flags.length}`;
-    startButton.addEventListener('click', startGame);
-    quizInfo.addEventListener('click', displayInfoOverlay);
-    hintButton.addEventListener('click', displayHintOverlay);
-
-    for (let i = 0; i < questionButtons.length; i++) {
-        questionButtons[i].addEventListener('click', checkCorrect);
-    }
+    
+    summaryMenu.classList.add('hide');
+    roundHandler();
 
 
-    console.log('Fine');
+    console.log('Restarting');
 }
 
 const init = () => {
@@ -320,7 +326,9 @@ const init = () => {
 
     fetchFlags();
 
+    flagImage.src = flags[questionCount - 1].image;
     displayButtons(2);
+
     quizCounter.textContent = `${questionCount}/${flags.length}`;
     startButton.addEventListener('click', startGame);
     quizInfo.addEventListener('click', displayInfoOverlay);
@@ -329,7 +337,6 @@ const init = () => {
     for (let i = 0; i < questionButtons.length; i++) {
         questionButtons[i].addEventListener('click', checkCorrect);
     }
-
 
     console.log('Fine');
 }
