@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/global-styles.css">
     <link rel="stylesheet" href="./css/geography-cities.css">
     <script defer src="./js/global.js"></script>
-    <!-- <script defer src="./js/homepage.js"></script> -->
+    <script defer src="./js/geography-cities.js"></script>
     <title>Geography</title>
 </head>
 <body>
@@ -26,7 +26,48 @@
         <a href="./geography.html" class="dropdown-item geography-dropdown-item"><img src="./assets/geography-icon.png" class="dropdown-icon" alt="Geography">Geography</a>
     </div>
     <main> 
+        <div id="start-menu" class="flex-display">
+            <h2 id="start-title">Capital Cities</h2>
+            <h3 id="start-subject" class="geography-text">Geography</h3>
+            <button id="start-button" class="geography-button">Start</button>
+            
+        </div>
+        <div id="quiz-menu" class="flex-display quiz-display hide">
+            <div id="quiz-elements">
+                <p id="quiz-counter">1/?</p>
+                <button id="quiz-info" class="geography-button">?</button>
+            </div>
 
+            <h2 id="quiz-question" class="center-horizontal">Placeholder Question?</h2>
+            <img id="city-image" src="#" class="center-horizontal">
+            <div id="drag-drop-wrapper" class="flex-display">
+                <!-- <div class="drag-drop-zone"></div>
+                <div class="drag-drop-zone"></div>
+                <div class="drag-drop-zone"></div>
+                <div class="drag-drop-zone"></div> -->
+            </div>
+            <div class="quiz-filler"></div>
+            <div id="quiz-question-buttons" class="center-horizontal">
+                <!-- <button class="question-button">A</button>
+                <button class="question-button">B</button>
+                <button class="question-button">C</button> -->
+            </div>
+            <button id="hint-button" class="hint-button geography-button center-horizontal">Hint</button>
+        </div>
+        
+        <div id="summary-menu" class="flex-display hide">
+            <div class="center-horizontal center-vertical">
+                <h2 id="end-title" class="center-horizontal"></h2>
+                <h2 id="score-text" class="center-horizontal"></h2>
+                <div id="summary-button-wrapper" class="flex-display">
+                    <a href="./geography.html" class="end-button-margin"><button id="back-button" class="geography-button summary-button">Back</button></a>
+                    <a href="#" class="end-button-margin"><button id="restart-button" class="geography-button summary-button">Restart</button></a>
+                </div>
+            </div>
+        </div>
+        <div id="quiz-next-overlay" class="flex-display quiz-next-overlay hide center-horizontal center-vertical">
+            <div id="overlay-content" class="flex-display center-horizontal"></div>
+        </div>
     </main>
 </body>
 </html>
