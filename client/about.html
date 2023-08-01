@@ -18,7 +18,7 @@
 <body>
     <nav class="nav-bg">
         <div id="nav-left-buttons" class="center-vertical">
-            <a href="./index.html" id="home-icon" class="center-vertical geography-nav-icon nav-button nav-icon"></a>
+            <a href="./homepage.html" id="home-icon" class="center-vertical geography-nav-icon nav-button nav-icon"></a>
             <a href="#" id="subject-icon" class="center-vertical geography-nav-icon nav-button nav-icon"></a>
             <a href="#" id="about-icon" class="center-vertical geography-nav-icon nav-button nav-icon"></a>
         </div>
@@ -75,22 +75,22 @@
     <h2>Meet the Members</h2>
     <div class="member">
     <h3> Marcus Mirecki</h3>
-    <img src="" alt="marcus"> 
+    <img class="team"src="./assets/marcus.jpg" alt="marcus"> 
     <p>he's unreal at making coffee</p>
     </div>
     <div class="member">
     <h3> Ranti Adeniyi</h3>
-    <img src="" alt="ranti"> 
+    <img class="team"src="./assets/ranti.jpg" alt="ranti"> 
     <p>still flexes her nyu email</p>
     </div>
     <div class="member">
     <h3> James Ly</h3>
-    <img src="" alt="james">  
+    <img class="team"src="./assets/james.png" alt="james">  
     <p>CSS is scared of him</p>
     </div>
     <div class="member">
     <h3> Hasan Shahid</h3>
-    <img src="" alt="hasan"> 
+    <img class ="team"src="./assets/hasan.jpeg" alt="hasan"> 
     <p>The best in the biz</p>
     </div>
 </section>
@@ -98,13 +98,31 @@
 <h3 id="contact-info">Contact Information</h3>
     <section class = "contact">
         <div class="inform">
-      <p>Telephone</p>
-      <p>Email</p>
-      </div>
+      <p>T: +44 79 50 686564</p>
+      <p> E: ctrl-freaks@lafosse.com</p>
+     
+      <form action="">
+        <h3> Want to reach out?</h3>
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="Your email..">
+        <label for="message">Message</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." ></textarea>
+    
+        <input type="submit" value="Submit">
+    
+      </form>
+    </div>
       <div class ="location">
         <p>Where to find us</p>
-        <img src="" alt="photo of Lafosse building/photo of map">
+        <img id="map"src="./assets/map.png" alt="map">
     </div>
+        
     </section>
 </body>
 </html>
