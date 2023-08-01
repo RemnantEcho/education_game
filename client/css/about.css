@@ -202,12 +202,10 @@ width:50%
 
 }
  
-
 .default-scroll::-webkit-scrollbar-thumb {
   background-color:#e09840;
   /* border-radius: 5px; */
 }
-
 
 .default-scroll::-webkit-scrollbar-thumb:hover {
   background-color: #c7883c;
@@ -222,3 +220,6 @@ width:50%
   background-repeat: no-repeat;
 }
 
+.hide {
+  display: none;
+}

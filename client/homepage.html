@@ -3,25 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/education_game/client/css/homepage.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&display=swap">
+    
+    <link rel="stylesheet" href="./css/global-styles.css">
+    <link rel="stylesheet" href="./css/homepage.css">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&display=swap"> -->
+    <script defer src="./js/global.js"></script>
+    <script defer src="./js/homepage.js"></script>
     <title>Homepage</title>
 </head>
 <body>
+    <nav class="nav-bg">
+        <div id="nav-left-buttons" class="center-vertical">
+            <a href="./homepage.html" id="home-icon" class="center-vertical default-nav-icon nav-button nav-icon"></a>
+            <a href="#" id="subject-icon" class="center-vertical default-nav-icon nav-button nav-icon"></a>
+            <a href="./about.html" id="about-icon" class="center-vertical default-nav-icon nav-button nav-icon"></a>
+        </div>
+        <div id="nav-center" class="center-horizontal center-vertical"><h1 id="title">Welcome to Education</h1></div>
+        <div id="nav-right-buttons" class="center-vertical">
+            <a href="#" id="account-icon" class="center-vertical default-nav-icon nav-button nav-icon"></a>
+        </div>
+    </nav>
+    <div id="subject-dropdown" class="dropdown-bar default-dropdown-bg hide">
+        <a href="./geography.html" class="dropdown-item default-dropdown-item"><img src="./assets/geography-icon.png" class="dropdown-icon" alt="Geography">Geography</a>
+    </div>
+    <main>
     <section>
-        <h1>Welcome to Education</h1>
         <h2>Pick a subject below</h2>
         <div class="grid-container" id="grid-container">
             <div class="box" id="geography">
-                <img src="/education_game/client/assets/world-map-169.jpg" alt="world-map">
+                <img src="./assets/world-map-169.jpg" alt="world-map">
                 <p>Geography</p>
             </div>
             <div class="box" id="history">
-                <img src="/education_game/client/assets/history-169.jpg" alt="history/einstein">
+                <img src="./assets/history-169.jpg" alt="history/einstein">
                 <p>History</p>
             </div>
             <div class="box" id="philosophy">
-                <img src="/education_game/client/assets/philsophy-169.jpg" alt="philosophy statue">
+                <img src="./assets/philsophy-169.jpg" alt="philosophy statue">
                 <p>Philosophy</p>
             </div>
             <!-- <div class="box" id="art">
@@ -38,6 +56,6 @@
             </div> -->
         </div>
     </section>
-    
+</main>
 </body>
 </html>
