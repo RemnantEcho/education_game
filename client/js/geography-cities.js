@@ -74,17 +74,62 @@ const allowDrop = (e) => {
 }
 
 const drag = (e) => {
-    console.log(e.target.id);
     e.dataTransfer.setData("text", e.target.id);
-    // let data = e.dataTransfer.getData("text");
-    // console.log(data);
 }
 
 const drop = (e) => {
     e.preventDefault();
     let data = e.dataTransfer.getData("text");
-    // console.log(data);
-    e.target.appendChild(document.getElementById(data));
+    // e.target.classList.add('dd-zone-mute');
+    let button = document.getElementById(data);
+    button.classList.add('dd-button-mute');
+
+    console.log(`Moving Button: ` + button.parentNode);
+    let draggedParent = button.parentNode;
+    let targetParent = e.target.parentNode;
+
+    // console.log(`Target Drop: ` + e.target);
+    // console.log(e.target.classList.contains('question-button'));
+    // console.log(e.target.parentNode);
+
+
+    if (e.target.classList.contains('drag-drop-zone')) {
+        e.target.classList.add('dd-zone-mute');
+    }
+
+    if (e.target.classList.contains('question-button')) {
+        let tempEl = button;
+        
+
+        if (e.target.parentNode.id == 'quiz-question-buttons') {
+            // console.log('It is a question button and the parent is Quiz Questions');
+            button.classList.remove('dd-button-mute');
+            // e.target.classList.remove('dd-button-mute');
+        }
+
+        console.log('Dragged Button Parent ID: ' + button.parentNode.id);
+
+        if (button.parentNode.id == 'quiz-question-buttons') {
+            e.target.classList.remove('dd-button-mute');
+        }
+        else {
+            e.target.classList.add('dd-button-mute');
+        }
+        
+        draggedParent.appendChild(e.target);
+        targetParent.appendChild(tempEl);
+        
+    }
+    else {
+        if (e.target.id == 'quiz-question-buttons') {
+            button.classList.remove('dd-button-mute');
+        }
+
+        draggedParent.classList.remove('dd-zone-mute');
+        e.target.appendChild(button);
+        // e.target.appendChild(button);
+    }
+    
 }
 
 const selectButton = (e) => {
@@ -106,6 +151,8 @@ const displayButtons = (arr) => {
 }
 
 const generateDropZones = () => {
+    questionButtons.addEventListener('drop', drop);
+    questionButtons.addEventListener('dragover', allowDrop);
     let len = cities[questionCount-1].capital.length;
     for (let i = 0; i < len; i++) {
         let button = document.createElement('button');
@@ -125,7 +172,7 @@ const generateButtons = () => {
 
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-    for (let i = splitCapital.length; i <= limit; i++) {
+    for (let i = splitCapital.length; i < limit; i++) {
         splitCapital.push(characters.charAt(Math.floor(Math.random() * characters.length)));
     }
 
