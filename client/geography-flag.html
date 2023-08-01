@@ -26,7 +26,7 @@
         <a href="./geography.html" class="dropdown-item geography-dropdown-item"><img src="./assets/geography-icon.png" class="dropdown-icon" alt="Geography">Geography</a>
     </div>
     <main>
-        <div id="start-menu" class="flex-display">
+        <div id="start-menu" class="flex-display hide">
             <h2 id="start-title">Flag</h2>
             <h3 id ="start-subject" class="geography-text">Geography</h3>
             <button id="start-button" class="geography-button">Start</button>
@@ -48,8 +48,15 @@
             <button id="hint-button" class="hint-button geography-button center-horizontal">Hint</button>
         </div>
         
-        <div id="summary-menu" class="flex-display hide">
-            
+        <div id="summary-menu" class="flex-display">
+            <div class="center-horizontal center-vertical">
+                <h2 id="end-title"></h2>
+                <h2 id="score-text"></h2>
+                <div id="summary-button-wrapper" class="flex-display">
+                    <button id="back-button" class="geography-button summary-button">Back</button>
+                    <button id="restart-button" class="geography-button summary-button">Restart</button>
+                </div>
+            </div>
         </div>
         <div id="quiz-next-overlay" class="flex-display quiz-next-overlay hide center-horizontal center-vertical">
             <div id="overlay-content" class="flex-display center-horizontal"></div>
