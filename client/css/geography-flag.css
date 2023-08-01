@@ -181,8 +181,18 @@ main {
     margin: 5% auto 5% auto;
 }
 
+#score-text {
+    margin: 2% auto 20% auto;
+}
+
 #summary-button-wrapper {
     flex-direction: row;
+    justify-content: center;
+}
+
+#summary-menu > div {
+    display: flex;
+    flex-direction: column;
 }
 
 .summary-button {
@@ -194,6 +204,9 @@ main {
     font-size: 1.3rem;
     cursor: pointer;
     font-weight: bold;
+}
+
+.end-button-margin {
     margin: 5% 5% 5% 5%;
 }
 
