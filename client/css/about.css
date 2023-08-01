@@ -16,7 +16,10 @@ li a {
   padding: 10px 14px;
   text-decoration: none;
 }
+.nav-icon {
+    background-color: #e09840;
 
+}
 .mission h1 {
   font-size: 75px;
   color:white;
