@@ -32,7 +32,7 @@ function addFlags(flags) {
 }
 
 // Temp Fetch
-async function fetchFlags() {
+async function fetchFlags(num) {
     // try {
     //     const flagData = await fetch(`http://localhost:3000/flags/10`);
     //     if (flagData.ok) {
@@ -49,7 +49,7 @@ async function fetchFlags() {
     // }
 
     
-    return fetch(`http://localhost:3000/flags/10`)
+    return fetch(`http://localhost:3000/flags/${num}`)
       .then((response) => response.json())
       .then((data) => {
         // console.log(data);
@@ -363,7 +363,10 @@ const init = () => {
 
     quizQuestion.textContent = "Which country does this flag belong to?";
 
-    fetchFlags();
+    const urlParam = window.location.search;
+    // console.log(String(urlParam).substring(1, urlParam.length));
+
+    fetchFlags(parseInt(String(urlParam).substring(1, urlParam.length)));
 
     // Remove after
     endTitle.textContent = evaluateScore();
