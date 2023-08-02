@@ -92,7 +92,11 @@ main {
     /* border: solid 3px #A0D26F; */
     border-radius: 5px;
     margin: 0 10px;
+<<<<<<< HEAD
     /* background-color: #fff; */
+=======
+    background-color: #fff;
+>>>>>>> ed8fbaad4b66adee39820930dc881e1ba3dacbc7
     font-size: 1.2rem;
     position: relative;
     padding: 0;
