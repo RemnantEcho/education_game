@@ -28,68 +28,80 @@ let questionCount;
 let scoreCount;
 
 // Temp Fetch
-const fetchFlags = () => {
+async function fetchFlags(num) {
+    await fetch(`https://localhost:3000/flags/${num}`)
+  .then((response) => response.json())
+  .then((data) => onScreen(data))
+  .catch((e)=> alert(e));
 
-    flags = [{
-            "name": "Peru",
-            "image": "./assets/peru-flag.png",
-            "hint": "A Hint of Some Kind",
-            "fact": "A Fun Fact that's fun for all the family"
-        },
-        {
-            "name": "Egypt",
-            "image": "./assets/egypt-flag.png",
-            "hint": "A Hint of Some Kind",
-            "fact": "A Fun Fact that's fun for all the family"
-        },
-        {
-            "name": "Australia",
-            "image": "./assets/australia-flag.png",
-            "hint": "A Hint of Some Kind",
-            "fact": "A Fun Fact that's fun for all the family"
-        },
-        {
-            "name": "Austria",
-            "image": "./assets/austria-flag.png",
-            "hint": "A Hint of Some Kind",
-            "fact": "A Fun Fact that's fun for all the family"
-        },
-        {
-            "name": "Taiwan",
-            "image": "./assets/taiwan-flag.png",
-            "hint": "A Hint of Some Kind",
-            "fact": "A Fun Fact that's fun for all the family"
-        },
-        {
-            "name": "Burma",
-            "image": "./assets/burma-flag.png",
-            "hint": "A Hint of Some Kind",
-            "fact": "A Fun Fact that's fun for all the family"
-        },{
-            "name": "Mexico",
-            "image": "./assets/mexico-flag.png",
-            "hint": "A Hint of Some Kind",
-            "fact": "A Fun Fact that's fun for all the family"
-        }
-        ,{
-            "name": "Argentina",
-            "image": "./assets/argentina-flag.png",
-            "hint": "A Hint of Some Kind",
-            "fact": "A Fun Fact that's fun for all the family"
-        }
-        ,{
-            "name": "Laos",
-            "image": "./assets/laos-flag.png",
-            "hint": "A Hint of Some Kind",
-            "fact": "A Fun Fact that's fun for all the family"
-        },
-        {
-            "name": "Cambodia",
-            "image": "./assets/cambodia-flag.png",
-            "hint": "A Hint of Some Kind",
-            "fact": "A Fun Fact that's fun for all the family"
-        }
-    ]
+//   const flagElement = document.querySelector("#flag-image");
+//   const authorElement = document.querySelector("#author");
+//   function onScreen(quote) {
+//   textElement.textContent = quote["content"];
+//   authorElement.textContent = quote["author"];
+  //}
+
+
+    // flags = [{
+    //         "name": "Peru",
+    //         "image": "./assets/peru-flag.png",
+    //         "hint": "A Hint of Some Kind",
+    //         "fact": "A Fun Fact that's fun for all the family"
+    //     },
+    //     {
+    //         "name": "Egypt",
+    //         "image": "./assets/egypt-flag.png",
+    //         "hint": "A Hint of Some Kind",
+    //         "fact": "A Fun Fact that's fun for all the family"
+    //     },
+    //     {
+    //         "name": "Australia",
+    //         "image": "./assets/australia-flag.png",
+    //         "hint": "A Hint of Some Kind",
+    //         "fact": "A Fun Fact that's fun for all the family"
+    //     },
+    //     {
+    //         "name": "Austria",
+    //         "image": "./assets/austria-flag.png",
+    //         "hint": "A Hint of Some Kind",
+    //         "fact": "A Fun Fact that's fun for all the family"
+    //     },
+    //     {
+    //         "name": "Taiwan",
+    //         "image": "./assets/taiwan-flag.png",
+    //         "hint": "A Hint of Some Kind",
+    //         "fact": "A Fun Fact that's fun for all the family"
+    //     },
+    //     {
+    //         "name": "Burma",
+    //         "image": "./assets/burma-flag.png",
+    //         "hint": "A Hint of Some Kind",
+    //         "fact": "A Fun Fact that's fun for all the family"
+    //     },{
+    //         "name": "Mexico",
+    //         "image": "./assets/mexico-flag.png",
+    //         "hint": "A Hint of Some Kind",
+    //         "fact": "A Fun Fact that's fun for all the family"
+    //     }
+    //     ,{
+    //         "name": "Argentina",
+    //         "image": "./assets/argentina-flag.png",
+    //         "hint": "A Hint of Some Kind",
+    //         "fact": "A Fun Fact that's fun for all the family"
+    //     }
+    //     ,{
+    //         "name": "Laos",
+    //         "image": "./assets/laos-flag.png",
+    //         "hint": "A Hint of Some Kind",
+    //         "fact": "A Fun Fact that's fun for all the family"
+    //     },
+    //     {
+    //         "name": "Cambodia",
+    //         "image": "./assets/cambodia-flag.png",
+    //         "hint": "A Hint of Some Kind",
+    //         "fact": "A Fun Fact that's fun for all the family"
+    //     }
+    // ]
 }
 
 const evaluateScore = () => {

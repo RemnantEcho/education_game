@@ -327,7 +327,7 @@ const init = () => {
     questionCount = 1;
     scoreCount = 0;
 
-    quizQuestion.textContent = "Which country does this flag belong to?";
+    quizQuestion.textContent = "Which era is this photo from?";
 
     fetchImages();
 
