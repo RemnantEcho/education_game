@@ -30,6 +30,7 @@ const urlParam = window.location.search;
 
 // Temp Fetch
 async function fetchFlags(num) {
+    console.log(num);
     // try {
     //     const flagData = await fetch(`http://localhost:3000/flags/10`);
     //     if (flagData.ok) {
@@ -46,15 +47,15 @@ async function fetchFlags(num) {
     // }
 
     
-    return fetch(`http://localhost:3000/flags/${num}`)
+    return fetch(`http://localhost:3000/flags?amount=${num}`)
       .then((response) => response.json())
       .then((data) => {
-        // console.log(data);
+        console.log(data);
         flags.push(...data);
         // for (let i = 0; i < data.length; i++) {
         //     flags.push(data[i]);
         // }
-        // init();
+        init();
       })
       .catch((e) => alert(e));
       
@@ -124,29 +125,6 @@ const evaluateScore = () => {
     if ((scoreCount / questionCount) * 100 >= 70) return `Great Job! You Passed!`;
     if ((scoreCount / questionCount) * 100 < 30) return `Next time revise Harder!`; 
     return `Better Luck Next Time!`; 
-}
-
-const displayButtons = (n) => {
-    // console.log(flags)
-    let currentItem = flags[questionCount-1];
-
-    // console.log(currentItem);
-    
-    let tempArray = flags.slice();
-    tempArray.splice(questionCount - 1, 1);
-
-    const shuffledArray = tempArray.sort(() => 0.5 - Math.random()).slice(0, n);
-    shuffledArray.push(currentItem);
-
-    // console.log(shuffledArray);
-
-    tempArray = shuffledArray.sort(() => 0.5 - Math.random());
-
-    // console.log(tempArray);
-
-    for (let i = 0; i < questionButtons.length; i++) {
-        questionButtons[i].textContent = `${tempArray[i].name}`;
-    }
 }
 
 const closeOverlay = (e) => {
@@ -300,6 +278,30 @@ const checkCorrect = (e) => {
     }
 }
 
+const displayButtons = (n) => {
+    // console.log(flags)
+    let currentItem = flags[questionCount-1];
+
+    // console.log(currentItem);
+    
+    let tempArray = flags.slice();
+    tempArray.splice(questionCount - 1, 1);
+
+    const shuffledArray = tempArray.sort(() => 0.5 - Math.random()).slice(0, n);
+    shuffledArray.push(currentItem);
+
+    // console.log(shuffledArray);
+
+    tempArray = shuffledArray.sort(() => 0.5 - Math.random());
+
+    // console.log(tempArray);
+
+    for (let i = 0; i < questionButtons.length; i++) {
+        questionButtons[i].textContent = `${tempArray[i].name}`;
+        questionButtons[i].addEventListener('click', checkCorrect);
+    }
+}
+
 const roundHandler = () => {
     // console.log('Triggered');
     if (flags.length != 0) {
@@ -343,7 +345,7 @@ const restart = (e) => {
 
     quizQuestion.textContent = "Which country does this flag belong to?";
 
-    fetchFlags(parseInt(String(urlParam).substring(1, urlParam.length)));
+    fetchFlags(parseInt(String(urlParam).substring(urlParam.length-2, urlParam.length)));
 
     // displayButtons(2);
     
@@ -363,7 +365,7 @@ const init = () => {
     
     // console.log(String(urlParam).substring(1, urlParam.length));
 
-    fetchFlags(parseInt(String(urlParam).substring(1, urlParam.length)));
+    // fetchFlags(parseInt(String(urlParam).substring(urlParam.length-2, urlParam.length)));
 
     // Remove after
     // endTitle.textContent = evaluateScore();
@@ -379,5 +381,5 @@ const init = () => {
     // console.log('Fine');
 }
 
-// fetchFlags();
-init();
+fetchFlags(parseInt(String(urlParam).substring(urlParam.length-2, urlParam.length)));
+// init();

@@ -3,8 +3,9 @@ const express = require('express');
 const app = express();
 const port = require('dotenv')
 
-const flags = require("./country-flags.json")
-const history = require("./history-images.json")
+const flags = require("./country-flags.json");
+const capitals = require("./capital-cities.json");
+const history = require("./history-images.json");
 const logger = require("./logger");
 app.use(logger);
 app.use(cors());
@@ -15,21 +16,54 @@ app.get("/", (req, res) => {
     res.send("Hello");
 });
 
-// app.get("/flags", (req, res) =>  {
-//     res.send(flags)
-// })
-// generate 10 random flags
+app.get("/flags", (req, res) =>  {
+    let amount = parseInt(req.query.amount);
+    
+    if (amount > flags.length) {
+        res.send(flags);
+    }
+    else {
+        let shuffledArray = flags
+        .map(value => ({ value, sort: Math.random() }))
+        .sort((a, b) => a.sort - b.sort)
+        .map(({ value }) => value);
+        res.send(shuffledArray.slice(0, amount));
+    }
+    
 
-app.get("/flags/10", (req, res) => {
-    const shuffledArr = flags.sort(() => Math.random() - 0.5);
-    res.send(shuffledArr.slice(0, 10))
 })
 
-// generate 20 random flags
+app.get("/capitals", (req, res) =>  {
+    let amount = parseInt(req.query.amount);
 
-app.get("/flags/20", (req, res) => {
-    const shuffledArr = flags.sort(() => Math.random() - 0.5);
-    res.send(shuffledArr.slice(0, 20))
+    if (amount > capitals.length) {
+        res.send(capitals);
+    }
+    else {
+        let shuffledArray = capitals
+        .map(value => ({ value, sort: Math.random() }))
+        .sort((a, b) => a.sort - b.sort)
+        .map(({ value }) => value);
+
+        res.send(shuffledArray.slice(0, amount));
+    }
+    
+})
+
+
+app.get("/history", (req, res) =>  {
+    let amount = parseInt(req.query.amount);
+    if (amount > history.length) {
+        res.send(capitals);
+    }
+    else {
+        let shuffledArray = history
+        .map(value => ({ value, sort: Math.random() }))
+        .sort((a, b) => a.sort - b.sort)
+        .map(({ value }) => value);
+
+        res.send(shuffledArray.slice(0, amount));
+    }
 })
 
 // history page

@@ -30,85 +30,85 @@ let questionCount;
 const urlParam = window.location.search;
 
 const fetchCities = (num) => {
-    /*
-    return fetch(`http://localhost:3000/capitals/${num}`)
+    
+    return fetch(`http://localhost:3000/capitals?amount=${num}`)
       .then((response) => response.json())
       .then((data) => {
-        flags.push(...data);
-        // init();
+        cities.push(...data);
+        init();
       })
       .catch((e) => alert(e));
-    */
-    cities = [{
-            "country": "England",
-            "capital": "London",
-            "image": "./assets/england-capital.png",
-            "hint": "This is a hint, get used to it",
-            "fact": "This is a fact! Educate yourself."
-        }, 
-        {
-            "country": "Germany",
-            "capital": "Berlin",
-            "image": "",
-            "hint": "This is a hint, get used to it",
-            "fact": "This is a fact! Educate yourself."
-        }, 
-        {
-            "country": "Netherlands",
-            "capital": "Amsterdam",
-            "image": "",
-            "hint": "This is a hint, get used to it",
-            "fact": "This is a fact! Educate yourself."
-        },
-        {
-            "country": "Spain",
-            "capital": "Barcelona",
-            "image": "",
-            "hint": "This is a hint, get used to it",
-            "fact": "This is a fact! Educate yourself."
-        },
-        {
-            "country": "Egypt",
-            "capital": "Cairo",
-            "image": "",
-            "hint": "This is a hint, get used to it",
-            "fact": "This is a fact! Educate yourself."
-        },
-        {
-            "country": "Australia",
-            "capital": "Canberra",
-            "image": "",
-            "hint": "This is a hint, get used to it",
-            "fact": "This is a fact! Educate yourself."
-        },
-        {
-            "country": "Japan",
-            "capital": "Tokyo",
-            "image": "",
-            "hint": "This is a hint, get used to it",
-            "fact": "This is a fact! Educate yourself."
-        },
-        {
-            "country": "Canada",
-            "capital": "Ottawa",
-            "image": "",
-            "hint": "This is a hint, get used to it",
-            "fact": "This is a fact! Educate yourself."
-        },
-        {
-            "country": "New Zealand",
-            "capital": "Wellington",
-            "image": "",
-            "hint": "This is a hint, get used to it",
-            "fact": "This is a fact! Educate yourself."
-        },
-        {
-            "country": "France",
-            "capital": "Paris",
-            "image": "",
-            "hint": "This is a hint, get used to it",
-            "fact": "This is a fact! Educate yourself."
-        }]
+    
+    // cities = [{
+    //         "country": "England",
+    //         "capital": "London",
+    //         "image": "./assets/england-capital.png",
+    //         "hint": "This is a hint, get used to it",
+    //         "fact": "This is a fact! Educate yourself."
+    //     }, 
+    //     {
+    //         "country": "Germany",
+    //         "capital": "Berlin",
+    //         "image": "",
+    //         "hint": "This is a hint, get used to it",
+    //         "fact": "This is a fact! Educate yourself."
+    //     }, 
+    //     {
+    //         "country": "Netherlands",
+    //         "capital": "Amsterdam",
+    //         "image": "",
+    //         "hint": "This is a hint, get used to it",
+    //         "fact": "This is a fact! Educate yourself."
+    //     },
+    //     {
+    //         "country": "Spain",
+    //         "capital": "Barcelona",
+    //         "image": "",
+    //         "hint": "This is a hint, get used to it",
+    //         "fact": "This is a fact! Educate yourself."
+    //     },
+    //     {
+    //         "country": "Egypt",
+    //         "capital": "Cairo",
+    //         "image": "",
+    //         "hint": "This is a hint, get used to it",
+    //         "fact": "This is a fact! Educate yourself."
+    //     },
+    //     {
+    //         "country": "Australia",
+    //         "capital": "Canberra",
+    //         "image": "",
+    //         "hint": "This is a hint, get used to it",
+    //         "fact": "This is a fact! Educate yourself."
+    //     },
+    //     {
+    //         "country": "Japan",
+    //         "capital": "Tokyo",
+    //         "image": "",
+    //         "hint": "This is a hint, get used to it",
+    //         "fact": "This is a fact! Educate yourself."
+    //     },
+    //     {
+    //         "country": "Canada",
+    //         "capital": "Ottawa",
+    //         "image": "",
+    //         "hint": "This is a hint, get used to it",
+    //         "fact": "This is a fact! Educate yourself."
+    //     },
+    //     {
+    //         "country": "New Zealand",
+    //         "capital": "Wellington",
+    //         "image": "",
+    //         "hint": "This is a hint, get used to it",
+    //         "fact": "This is a fact! Educate yourself."
+    //     },
+    //     {
+    //         "country": "France",
+    //         "capital": "Paris",
+    //         "image": "",
+    //         "hint": "This is a hint, get used to it",
+    //         "fact": "This is a fact! Educate yourself."
+    //     }]
 }
 
 const evaluateScore = () => {
@@ -424,7 +424,7 @@ const restart = (e) => {
 
     quizQuestion.textContent = "What Capital City does this Picture belong to?";
 
-    fetchCities(parseInt(String(urlParam).substring(1, urlParam.length)));
+    fetchCities(String(urlParam).substring(urlParam.length-2, urlParam.length));
     summaryMenu.classList.add('hide');
     dragDropWrapper.textContent = '';
     questionButtons.textContent = '';
@@ -439,7 +439,7 @@ const init = () => {
     questionCount = 1;
 
     quizQuestion.textContent = "What Capital City does this Picture belong to?";
-    fetchCities(parseInt(String(urlParam).substring(1, urlParam.length)));
+    
 
     startButton.addEventListener('click', startGame);
     quizInfo.addEventListener('click', displayInfoOverlay);
@@ -448,4 +448,5 @@ const init = () => {
     restartButton.addEventListener('click', restart);
 }
 
-init();
+fetchCities(String(urlParam).substring(urlParam.length-2, urlParam.length));
+// init();
