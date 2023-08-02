@@ -8,5 +8,16 @@
     { "country": "Japan", "capital": "Tokyo", "image": "", "hint": "This is a hint, get used to it", "fact": "This is a fact! Educate yourself."}, 
     { "country": "Canada", "capital": "Ottawa", "image": "", "hint": "This is a hint, get used to it", "fact": "This is a fact! Educate yourself." }, 
     { "country": "New Zealand", "capital": "Wellington", "image": "", "hint": "This is a hint, get used to it", "fact": "This is a fact! Educate yourself."}, 
+    { "country": "Qatar", "capital": "Doha", "image": "", "hint": "This is a hint, get used to it", "fact": "This is a fact! Educate yourself."},
+    { "country": "Seychelles", "capital": "Victoria", "image": "", "hint": "This is a hint, get used to it", "fact": "This is a fact! Educate yourself."},
+    { "country": "Vatican City", "capital": "Vatican City", "image": "", "hint": "This is a hint, get used to it", "fact": "This is a fact! Educate yourself."},
+    { "country": "France", "capital": "Paris", "image": "", "hint": "This is a hint, get used to it", "fact": "This is a fact! Educate yourself."},
+    { "country": "France", "capital": "Paris", "image": "", "hint": "This is a hint, get used to it", "fact": "This is a fact! Educate yourself."},
+    { "country": "France", "capital": "Paris", "image": "", "hint": "This is a hint, get used to it", "fact": "This is a fact! Educate yourself."},
+    { "country": "France", "capital": "Paris", "image": "", "hint": "This is a hint, get used to it", "fact": "This is a fact! Educate yourself."},
+    { "country": "France", "capital": "Paris", "image": "", "hint": "This is a hint, get used to it", "fact": "This is a fact! Educate yourself."},
+    { "country": "France", "capital": "Paris", "image": "", "hint": "This is a hint, get used to it", "fact": "This is a fact! Educate yourself."},
+    { "country": "France", "capital": "Paris", "image": "", "hint": "This is a hint, get used to it", "fact": "This is a fact! Educate yourself."},
+    { "country": "France", "capital": "Paris", "image": "", "hint": "This is a hint, get used to it", "fact": "This is a fact! Educate yourself."},
     { "country": "France", "capital": "Paris", "image": "", "hint": "This is a hint, get used to it", "fact": "This is a fact! Educate yourself."}
 ]

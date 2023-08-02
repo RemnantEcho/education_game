@@ -23,6 +23,7 @@ let gameState = {
 }
 
 let cities = [];
+let hasInitialised = false;
 let currentState;
 let scoreCount;
 let questionCount;
@@ -34,8 +35,17 @@ const fetchCities = (num) => {
     return fetch(`http://localhost:3000/capitals?amount=${num}`)
       .then((response) => response.json())
       .then((data) => {
+        cities = [];
         cities.push(...data);
-        init();
+
+        if (!hasInitialised) {
+            // console.log(`Hasn't initialised`);
+            init();
+        }
+        else {
+            // console.log(flags);
+            reinit();
+        }
       })
       .catch((e) => alert(e));
     
@@ -417,14 +427,17 @@ const startGame = (e) => {
 
 const restart = (e) => {
     e.preventDefault();
+    fetchCities(String(urlParam).substring(urlParam.length-2, urlParam.length));
+}
 
+const reinit = () => {
     currentState = gameState.idle;
     questionCount = 1;
     scoreCount = 0;
 
     quizQuestion.textContent = "What Capital City does this Picture belong to?";
 
-    fetchCities(String(urlParam).substring(urlParam.length-2, urlParam.length));
+    
     summaryMenu.classList.add('hide');
     dragDropWrapper.textContent = '';
     questionButtons.textContent = '';
@@ -435,6 +448,7 @@ const restart = (e) => {
 
 const init = () => {
     currentState = gameState.idle;
+    hasInitialised = true;
     scoreCount = 0;
     questionCount = 1;
 

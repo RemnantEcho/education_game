@@ -25,12 +25,13 @@ let flags = [];
 let currentState;
 let questionCount;
 let scoreCount;
+let hasInitialised = false;
 
 const urlParam = window.location.search;
 
 // Temp Fetch
 async function fetchFlags(num) {
-    console.log(num);
+    // console.log(num);
     // try {
     //     const flagData = await fetch(`http://localhost:3000/flags/10`);
     //     if (flagData.ok) {
@@ -50,12 +51,20 @@ async function fetchFlags(num) {
     return fetch(`http://localhost:3000/flags?amount=${num}`)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        flags = [];
         flags.push(...data);
         // for (let i = 0; i < data.length; i++) {
         //     flags.push(data[i]);
         // }
-        init();
+        if (!hasInitialised) {
+            // console.log(`Hasn't initialised`);
+            init();
+        }
+        else {
+            // console.log(flags);
+            reinit();
+        }
+        
       })
       .catch((e) => alert(e));
       
@@ -287,12 +296,22 @@ const displayButtons = (n) => {
     let tempArray = flags.slice();
     tempArray.splice(questionCount - 1, 1);
 
-    const shuffledArray = tempArray.sort(() => 0.5 - Math.random()).slice(0, n);
+    // const shuffledArray = tempArray.sort(() => 0.5 - Math.random()).slice(0, n);
+    
+    let shuffledArray = tempArray
+        .map(value => ({ value, sort: Math.random() }))
+        .sort((a, b) => a.sort - b.sort)
+        .map(({ value }) => value).slice(0, n);
     shuffledArray.push(currentItem);
 
     // console.log(shuffledArray);
 
-    tempArray = shuffledArray.sort(() => 0.5 - Math.random());
+    tempArray = shuffledArray
+        .map(value => ({ value, sort: Math.random() }))
+        .sort((a, b) => a.sort - b.sort)
+        .map(({ value }) => value);
+
+    // tempArray = shuffledArray.sort(() => 0.5 - Math.random());
 
     // console.log(tempArray);
 
@@ -304,10 +323,12 @@ const displayButtons = (n) => {
 
 const roundHandler = () => {
     // console.log('Triggered');
+    console.log(`Flag length: ` + flags.length);
     if (flags.length != 0) {
         switch(currentState) {
             case gameState.idle:
                 currentState = gameState.playing;
+                console.log('Playing');
                 startMenu.classList.add('hide');
                 quizMenu.classList.remove('hide');
                 flagImage.src = flags[questionCount - 1]['image'];
@@ -331,32 +352,37 @@ const roundHandler = () => {
 
 const startGame = (e) => {
     e.preventDefault();
-    console.log('Fired');
+    // console.log('Fired');
     roundHandler();
 }
 
-
 const restart = (e) => {
     e.preventDefault();
+    fetchFlags(parseInt(String(urlParam).substring(urlParam.length-2, urlParam.length)));
+}
 
+const reinit = () => {
+    console.log('Reinit');
     currentState = gameState.idle;
     questionCount = 1;
     scoreCount = 0;
 
     quizQuestion.textContent = "Which country does this flag belong to?";
-
-    fetchFlags(parseInt(String(urlParam).substring(urlParam.length-2, urlParam.length)));
-
-    // displayButtons(2);
     
     summaryMenu.classList.add('hide');
     roundHandler();
+    
 
-    console.log('Restarting');
+    // displayButtons(2);
+    
+    
+
+    // console.log('Restarting');
 }
 
 const init = () => {
     currentState = gameState.idle;
+    hasInitialised = true;
     questionCount = 1;
     scoreCount = 0;
 
