@@ -9,6 +9,10 @@ app.use(logger);
 app.use(cors());
 app.use(express.json());
 
+app.listen(port, () => {
+    console.log(`API listening on Port ${port}`)
+})
+
 app.get("/", (req, res) => {
     res.send("Hello");
 });
