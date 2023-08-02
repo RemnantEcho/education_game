@@ -20,6 +20,20 @@ main {
     font-size: 1.5rem;
 }
 
+.geography-dropdown-bg {
+    background-color: #860f1d;
+}
+.geography-dropdown-item {
+    background-color: #860f1d;
+    /* color: #ededed; */
+}
+
+.geography-dropdown-item:hover {
+    background-color: #89b35f; 
+    /* color: #ededed; */
+}
+
+
 #start-button {
     width: 150px;
     height: 50px;
