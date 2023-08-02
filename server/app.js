@@ -4,10 +4,9 @@ const app = express();
 const port = require('dotenv')
 
 const flags = require("./country-flags.json")
+const history = require("./history-images.json")
 const logger = require("./logger");
 app.use(logger);
-
-
 app.use(cors());
 app.use(express.json());
 
@@ -33,11 +32,22 @@ app.get("/flags/20", (req, res) => {
     res.send(shuffledArr.slice(0, 20))
 })
 
-app.get("/flags", (req, res) => {
-    // const { data } = await
-    const shuffledArr = flags.sort(() => Math.random() - 0.5);
+// history page
+app.get("/history", (req,res) => {
+    res.send(history)
+})
+
+// shuffling history images to get 10
+app.get("/history/10", (req, res) => {
+    const shuffledArr = history.sort(() => Math.random() - 0.5);
+    res.send(shuffledArr.slice(0, 10))
+})
+// shuffling history images to get 20
+app.get("/history/20", (req, res) => {
+    const shuffledArr = history.sort(() => Math.random() - 0.5);
     res.send(shuffledArr.slice(0, 20))
 })
+
 
 
 module.exports = app;
