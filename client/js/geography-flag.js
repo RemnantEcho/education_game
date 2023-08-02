@@ -28,13 +28,11 @@ let questionCount;
 let scoreCount;
 
 // Temp Fetch
-function fetchFlags() {
-    return fetch(`http://localhost:3000/flags/10`)
-      .then((response) => response.json())
-      .then((data) => {
-        flags.push(...data);
-      })
-      .catch((e) => alert(e));
+async function fetchFlags() {
+    await fetch(`http://localhost:3000/flags/10`)
+  .then((response) => response.json())
+  .then((data) => flags.push(data))
+  .catch((e)=> alert(e));
 
 //   const flagElement = document.querySelector("#flag-image");
 //   const authorElement = document.querySelector("#author");
@@ -346,7 +344,7 @@ const init = () => {
 
     fetchFlags();
     console.log(flags)
-    console.log(flags[0])
+    console.log(flags[1])
     flagImage.src = flags[questionCount - 1].image;
     displayButtons(2);
 
