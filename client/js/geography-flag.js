@@ -23,13 +23,10 @@ let gameState = {
 
 let flags = [];
 let currentState;
-
 let questionCount;
 let scoreCount;
 
-function addFlags(flags) {
-
-}
+const urlParam = window.location.search;
 
 // Temp Fetch
 async function fetchFlags(num) {
@@ -312,7 +309,9 @@ const roundHandler = () => {
                 startMenu.classList.add('hide');
                 quizMenu.classList.remove('hide');
                 flagImage.src = flags[questionCount - 1]['image'];
+                quizCounter.textContent = `${questionCount}/${flags.length}`;
                 displayButtons(2);
+                
             break;
             case gameState.playing:
                 currentState = gameState.idle;
@@ -344,14 +343,12 @@ const restart = (e) => {
 
     quizQuestion.textContent = "Which country does this flag belong to?";
 
-    //fetchFlags();
+    fetchFlags(parseInt(String(urlParam).substring(1, urlParam.length)));
 
-    displayButtons(2);
-    quizCounter.textContent = `${questionCount}/${flags.length}`;
+    // displayButtons(2);
     
     summaryMenu.classList.add('hide');
     roundHandler();
-
 
     console.log('Restarting');
 }
@@ -363,14 +360,14 @@ const init = () => {
 
     quizQuestion.textContent = "Which country does this flag belong to?";
 
-    const urlParam = window.location.search;
+    
     // console.log(String(urlParam).substring(1, urlParam.length));
 
     fetchFlags(parseInt(String(urlParam).substring(1, urlParam.length)));
 
     // Remove after
-    endTitle.textContent = evaluateScore();
-    scoreText.textContent = `You Scored: ${scoreCount} / ${flags.length}`;
+    // endTitle.textContent = evaluateScore();
+    // scoreText.textContent = `You Scored: ${scoreCount} / ${flags.length}`;
     //
 
     quizCounter.textContent = `${questionCount}/${flags.length}`;
@@ -378,10 +375,6 @@ const init = () => {
     quizInfo.addEventListener('click', displayInfoOverlay);
     hintButton.addEventListener('click', displayHintOverlay);
     restartButton.addEventListener('click', restart);
-
-    for (let i = 0; i < questionButtons.length; i++) {
-        questionButtons[i].addEventListener('click', checkCorrect);
-    }
 
     // console.log('Fine');
 }

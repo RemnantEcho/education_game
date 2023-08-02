@@ -151,6 +151,7 @@ main {
 .info-text {
     color: #000;
     font-size: 1.0rem;
+    word-wrap: break-word;
 }
 
 .next-button {

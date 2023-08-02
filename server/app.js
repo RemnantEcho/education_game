@@ -16,9 +16,9 @@ app.get("/", (req, res) => {
     res.send("Hello");
 });
 
-app.get("/flags", (req, res) =>  {
-    res.send(flags)
-})
+// app.get("/flags", (req, res) =>  {
+//     res.send(flags)
+// })
 // generate 10 random flags
 
 app.get("/flags/10", (req, res) => {
@@ -29,6 +29,12 @@ app.get("/flags/10", (req, res) => {
 // generate 20 random flags
 
 app.get("/flags/20", (req, res) => {
+    const shuffledArr = flags.sort(() => Math.random() - 0.5);
+    res.send(shuffledArr.slice(0, 20))
+})
+
+app.get("/flags", (req, res) => {
+    // const { data } = await
     const shuffledArr = flags.sort(() => Math.random() - 0.5);
     res.send(shuffledArr.slice(0, 20))
 })
