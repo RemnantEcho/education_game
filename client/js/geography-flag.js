@@ -28,11 +28,13 @@ let questionCount;
 let scoreCount;
 
 // Temp Fetch
-async function fetchFlags(num) {
-    await fetch(`https://localhost:3000/flags/${num}`)
-  .then((response) => response.json())
-  .then((data) => onScreen(data))
-  .catch((e)=> alert(e));
+function fetchFlags() {
+    return fetch(`http://localhost:3000/flags/10`)
+      .then((response) => response.json())
+      .then((data) => {
+        flags.push(...data);
+      })
+      .catch((e) => alert(e));
 
 //   const flagElement = document.querySelector("#flag-image");
 //   const authorElement = document.querySelector("#author");
@@ -111,6 +113,7 @@ const evaluateScore = () => {
 }
 
 const displayButtons = (n) => {
+    console.log(flags)
     let currentItem = flags[questionCount-1];
 
     console.log(currentItem);
@@ -342,7 +345,8 @@ const init = () => {
     quizQuestion.textContent = "Which country does this flag belong to?";
 
     fetchFlags();
-
+    console.log(flags)
+    console.log(flags[0])
     flagImage.src = flags[questionCount - 1].image;
     displayButtons(2);
 
