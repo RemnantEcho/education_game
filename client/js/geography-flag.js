@@ -21,27 +21,46 @@ let gameState = {
     "playing": 1
 }
 
-let flags = []
+let flags = [];
 let currentState;
 
 let questionCount;
 let scoreCount;
 
+function addFlags(flags) {
+
+}
+
 // Temp Fetch
 async function fetchFlags() {
-    await fetch(`http://localhost:3000/flags/10`)
-  .then((response) => response.json())
-  .then((data) => flags.push(data))
-  .catch((e)=> alert(e));
+    // try {
+    //     const flagData = await fetch(`http://localhost:3000/flags/10`);
+    //     if (flagData.ok) {
+    //         const data = await flagData.json();
+    //         for (let i = 0; i < data.length; i++) {
+    //             flags.push(data[i]);
+    //             console.log(flags[i]);
+    //         }
+    //         init();
+    //     }
+    // }
+    // catch (e) {
+    //     console.log(e);
+    // }
 
-//   const flagElement = document.querySelector("#flag-image");
-//   const authorElement = document.querySelector("#author");
-//   function onScreen(quote) {
-//   textElement.textContent = quote["content"];
-//   authorElement.textContent = quote["author"];
-  //}
-
-
+    
+    return fetch(`http://localhost:3000/flags/10`)
+      .then((response) => response.json())
+      .then((data) => {
+        // console.log(data);
+        flags.push(...data);
+        // for (let i = 0; i < data.length; i++) {
+        //     flags.push(data[i]);
+        // }
+        // init();
+      })
+      .catch((e) => alert(e));
+      
     // flags = [{
     //         "name": "Peru",
     //         "image": "./assets/peru-flag.png",
@@ -111,10 +130,10 @@ const evaluateScore = () => {
 }
 
 const displayButtons = (n) => {
-    console.log(flags)
+    // console.log(flags)
     let currentItem = flags[questionCount-1];
 
-    console.log(currentItem);
+    // console.log(currentItem);
     
     let tempArray = flags.slice();
     tempArray.splice(questionCount - 1, 1);
@@ -122,11 +141,11 @@ const displayButtons = (n) => {
     const shuffledArray = tempArray.sort(() => 0.5 - Math.random()).slice(0, n);
     shuffledArray.push(currentItem);
 
-    console.log(shuffledArray);
+    // console.log(shuffledArray);
 
     tempArray = shuffledArray.sort(() => 0.5 - Math.random());
 
-    console.log(tempArray);
+    // console.log(tempArray);
 
     for (let i = 0; i < questionButtons.length; i++) {
         questionButtons[i].textContent = `${tempArray[i].name}`;
@@ -292,6 +311,8 @@ const roundHandler = () => {
                 currentState = gameState.playing;
                 startMenu.classList.add('hide');
                 quizMenu.classList.remove('hide');
+                flagImage.src = flags[questionCount - 1]['image'];
+                displayButtons(2);
             break;
             case gameState.playing:
                 currentState = gameState.idle;
@@ -323,7 +344,7 @@ const restart = (e) => {
 
     quizQuestion.textContent = "Which country does this flag belong to?";
 
-    fetchFlags();
+    //fetchFlags();
 
     displayButtons(2);
     quizCounter.textContent = `${questionCount}/${flags.length}`;
@@ -343,10 +364,6 @@ const init = () => {
     quizQuestion.textContent = "Which country does this flag belong to?";
 
     fetchFlags();
-    console.log(flags)
-    console.log(flags[1])
-    flagImage.src = flags[questionCount - 1].image;
-    displayButtons(2);
 
     // Remove after
     endTitle.textContent = evaluateScore();
@@ -363,7 +380,8 @@ const init = () => {
         questionButtons[i].addEventListener('click', checkCorrect);
     }
 
-    console.log('Fine');
+    // console.log('Fine');
 }
 
+// fetchFlags();
 init();
