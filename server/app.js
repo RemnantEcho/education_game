@@ -7,8 +7,6 @@ const flags = require("./country-flags.json")
 const history = require("./history-images.json")
 const logger = require("./logger");
 app.use(logger);
-
-
 app.use(cors());
 app.use(express.json());
 
