@@ -53,7 +53,7 @@ h2 {
     flex-direction: column;
     flex-wrap: nowrap;
     overflow: hidden;
-    background-color: orange;
+    /* background-color: orange; */
     box-shadow: 0.5px 0.5px 5px rgba(0, 0, 0, 1);
     filter: grayscale(0%);
     transition: 0.5s;
