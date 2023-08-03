@@ -397,7 +397,7 @@ const init = () => {
     // endTitle.textContent = evaluateScore();
     // scoreText.textContent = `You Scored: ${scoreCount} / ${flags.length}`;
     //
-
+    
     quizCounter.textContent = `${questionCount}/${flags.length}`;
     startButton.addEventListener('click', startGame);
     quizInfo.addEventListener('click', displayInfoOverlay);
