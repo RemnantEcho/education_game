@@ -28,69 +28,77 @@ let questionCount;
 let scoreCount;
 
 // Temp Fetch
-const fetchImages = () => {
-
-    images = [{
-            "name": "Peru",
-            "image": "./assets/peru-flag.png",
-            "hint": "A Hint of Some Kind",
-            "fact": "A Fun Fact that's fun for all the family"
-        },
-        {
-            "name": "Egypt",
-            "image": "./assets/egypt-flag.png",
-            "hint": "A Hint of Some Kind",
-            "fact": "A Fun Fact that's fun for all the family"
-        },
-        {
-            "name": "Australia",
-            "image": "./assets/australia-flag.png",
-            "hint": "A Hint of Some Kind",
-            "fact": "A Fun Fact that's fun for all the family"
-        },
-        {
-            "name": "Austria",
-            "image": "./assets/austria-flag.png",
-            "hint": "A Hint of Some Kind",
-            "fact": "A Fun Fact that's fun for all the family"
-        },
-        {
-            "name": "Taiwan",
-            "image": "./assets/taiwan-flag.png",
-            "hint": "A Hint of Some Kind",
-            "fact": "A Fun Fact that's fun for all the family"
-        },
-        {
-            "name": "Burma",
-            "image": "./assets/burma-flag.png",
-            "hint": "A Hint of Some Kind",
-            "fact": "A Fun Fact that's fun for all the family"
-        },{
-            "name": "Mexico",
-            "image": "./assets/mexico-flag.png",
-            "hint": "A Hint of Some Kind",
-            "fact": "A Fun Fact that's fun for all the family"
-        }
-        ,{
-            "name": "Argentina",
-            "image": "./assets/argentina-flag.png",
-            "hint": "A Hint of Some Kind",
-            "fact": "A Fun Fact that's fun for all the family"
-        }
-        ,{
-            "name": "Laos",
-            "image": "./assets/laos-flag.png",
-            "hint": "A Hint of Some Kind",
-            "fact": "A Fun Fact that's fun for all the family"
-        },
-        {
-            "name": "Cambodia",
-            "image": "./assets/cambodia-flag.png",
-            "hint": "A Hint of Some Kind",
-            "fact": "A Fun Fact that's fun for all the family"
-        }
-    ]
+async function fetchImages(num) {
+    return fetch(`http://localhost:3000/history/${num}`)
+      .then((response) => response.json())
+      .then((data) => {
+        images.push(...data);
+})
+.catch((e) => alert(e));
 }
+// const fetchImages = () => {
+
+//     images = [{
+//             "name": "Peru",
+//             "image": "./assets/peru-flag.png",
+//             "hint": "A Hint of Some Kind",
+//             "fact": "A Fun Fact that's fun for all the family"
+//         },
+//         {
+//             "name": "Egypt",
+//             "image": "./assets/egypt-flag.png",
+//             "hint": "A Hint of Some Kind",
+//             "fact": "A Fun Fact that's fun for all the family"
+//         },
+//         {
+//             "name": "Australia",
+//             "image": "./assets/australia-flag.png",
+//             "hint": "A Hint of Some Kind",
+//             "fact": "A Fun Fact that's fun for all the family"
+//         },
+//         {
+//             "name": "Austria",
+//             "image": "./assets/austria-flag.png",
+//             "hint": "A Hint of Some Kind",
+//             "fact": "A Fun Fact that's fun for all the family"
+//         },
+//         {
+//             "name": "Taiwan",
+//             "image": "./assets/taiwan-flag.png",
+//             "hint": "A Hint of Some Kind",
+//             "fact": "A Fun Fact that's fun for all the family"
+//         },
+//         {
+//             "name": "Burma",
+//             "image": "./assets/burma-flag.png",
+//             "hint": "A Hint of Some Kind",
+//             "fact": "A Fun Fact that's fun for all the family"
+//         },{
+//             "name": "Mexico",
+//             "image": "./assets/mexico-flag.png",
+//             "hint": "A Hint of Some Kind",
+//             "fact": "A Fun Fact that's fun for all the family"
+//         }
+//         ,{
+//             "name": "Argentina",
+//             "image": "./assets/argentina-flag.png",
+//             "hint": "A Hint of Some Kind",
+//             "fact": "A Fun Fact that's fun for all the family"
+//         }
+//         ,{
+//             "name": "Laos",
+//             "image": "./assets/laos-flag.png",
+//             "hint": "A Hint of Some Kind",
+//             "fact": "A Fun Fact that's fun for all the family"
+//         },
+//         {
+//             "name": "Cambodia",
+//             "image": "./assets/cambodia-flag.png",
+//             "hint": "A Hint of Some Kind",
+//             "fact": "A Fun Fact that's fun for all the family"
+//         }
+//     ]
+// }
 
 const evaluateScore = () => {
     if ((scoreCount / questionCount) * 100 >= 70) return `Great Job! You Passed!`;
@@ -116,7 +124,7 @@ const displayButtons = (n) => {
     console.log(tempArray);
 
     for (let i = 0; i < questionButtons.length; i++) {
-        questionButtons[i].textContent = `${tempArray[i].name}`;
+        questionButtons[i].textContent = `${tempArray[i].event}`;
     }
 }
 
@@ -206,7 +214,7 @@ const displayInfoOverlay = () => {
     let displayParagraph = document.createElement('p');
     displayParagraph.classList.add('info-text');
     displayParagraph.classList.add('center-horizontal');
-    displayParagraph.textContent = "Guess what Flag corresponds to what country, and click on the button with the one you want below the flag.";
+    displayParagraph.textContent = "Guess which time period corresponds to what image, and click on the button with the one you want below the image.";
 
     // let quizFiller = document.createElement('div');
     // quizFiller.classList.add('quiz-filler');
@@ -262,7 +270,7 @@ const checkCorrect = (e) => {
 
     let text = e.target.textContent;
 
-    if (String(text).toLowerCase() == String(images[questionCount - 1].name).toLowerCase()) {
+    if (String(text).toLowerCase() == String(images[questionCount - 1].event).toLowerCase()) {
         scoreCount++;
         displayResultOverlay(0);
     }
@@ -308,9 +316,9 @@ const restart = (e) => {
     questionCount = 1;
     scoreCount = 0;
 
-    quizQuestion.textContent = "Which country does this flag belong to?";
+    quizQuestion.textContent = "Which time period does this image belong to?";
 
-    fetchImages();
+    // fetchImages();
 
     displayButtons(2);
     quizCounter.textContent = `${questionCount}/${images.length}`;
@@ -327,12 +335,13 @@ const init = () => {
     questionCount = 1;
     scoreCount = 0;
 
-    quizQuestion.textContent = "Which country does this flag belong to?";
+    quizQuestion.textContent = "Which time period does this image belong to?";
 
-    fetchImages();
+    const urlParam = window.location.search;
+    fetchImages(parseInt(String(urlParam).substring(1, urlParam.length)));
 
-    flagImage.src = images[questionCount - 1].image;
-    displayButtons(2);
+    // flagImage.src = images[questionCount - 1].image;
+    // displayButtons(2);
 
     // Remove after
     endTitle.textContent = evaluateScore();
@@ -349,7 +358,7 @@ const init = () => {
         questionButtons[i].addEventListener('click', checkCorrect);
     }
 
-    console.log('Fine');
+    // console.log('Fine');
 }
 
 init();

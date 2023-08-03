@@ -44,71 +44,13 @@ html, body {
     margin: 20px 40px;
 }
 
-.geography-scroll::-webkit-scrollbar {
-    width: 15px;
-    
-}
-
-.geography-scroll::-webkit-scrollbar-track {
-    background: #E7E7E7;
-    border-radius: 5px;
-}
-   
-
-.geography-scroll::-webkit-scrollbar-thumb {
-    background: #8e0e1e;
-    border-radius: 5px;
-}
-  
-
-.geography-scroll::-webkit-scrollbar-thumb:hover {
-    background: #ba061b; 
-}
-
-.geography-bg {
-    background-color: #8e0e1e;
-}
-
-.geography-dropdown-bg {
-    background-color: #860f1d;
-}
-
-.geography-item {
-    display: flex;
-    height: 60px;
-    width: calc(100% - 6px);
-    border: solid 3px #8e0e1e;
-    border-radius: 10px;
-    font-size: 1.0rem;
-    color: #000;
-    transition: background-color .5s;
-}
-
-.geography-dropdown-item {
-    background-color: #860f1d;
-    /* color: #ededed; */
-}
-
-.geography-dropdown-item:hover {
-    background-color: #89b35f; 
-    /* color: #ededed; */
-}
-
-/* .geography-item:hover {
-    background-color: #ededed;
-} */
-
-.geography-nav-icon {
-    background-color: #8e0e1e;
-}
-
 .list-item {
     cursor: pointer;
     text-decoration: none;
 }
 
 .list-item:hover .list-item-amount {
-    width: 20%;
+    width: 30%;
 }
 
 .list-item-title {
@@ -141,14 +83,19 @@ html, body {
     margin: 0 4px;
     text-decoration: none;
     color: #000;
+    overflow: hidden;
+    min-width: 30px;
 }
 
 .list-item-amount p {
-    transition:none;
-    margin-left: 5px;
     font-size: 12px;
     font-weight: bold;
     font-style: italic;
+    max-height: 30px;
+    min-width: 120px;
+    max-width: 120px;
+    overflow: hidden;
+    margin: auto 0 auto 8px;
 }
 
 .amount-block:hover {

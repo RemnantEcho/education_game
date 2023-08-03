@@ -141,6 +141,19 @@ html, body {
     margin: 0 4px;
     text-decoration: none;
     color: #000;
+    overflow: hidden;
+    min-width: 30px;
+}
+
+.list-item-amount p {
+    font-size: 12px;
+    font-weight: bold;
+    font-style: italic;
+    max-height: 30px;
+    min-width: 120px;
+    max-width: 120px;
+    overflow: hidden;
+    margin: auto 0 auto 8px;
 }
 
 .amount-block:hover {

@@ -15,8 +15,19 @@ body, html {
     
 } */
 
+main {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main > section {
+    width: 80%;
+}
+
 h2 {
     text-align: center;
+    margin: 6% auto 3% auto;
 }
 
 .grid-container a {
@@ -68,4 +79,8 @@ h2 {
 
 .hide {
     display: none;
+}
+
+.flex-display {
+    display: flex;
 }
