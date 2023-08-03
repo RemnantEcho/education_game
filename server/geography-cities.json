@@ -1,210 +1,210 @@
 [{
     "country": "England",
     "capital": "London",
-    "image": "./assets/england-capital.png",
+    "image": "https://drive.google.com/uc?export=view&id=10FrRrfPEmwLbMdp-4od_eoxmV-RjGPbH",
     "hint": "Historic city located along the River Thames.",
     "fact": "The London Underground is the oldest underground railway network in the world."
 }, 
 {
     "country": "Germany",
     "capital": "Berlin",
-    "image": "",
+    "image": "https://drive.google.com/uc?export=view&id=1Z31GJDmqjGmXnXDJq1DIAwD8EpV0b5Zn",
     "hint": "The city was divided by a famous wall during the Cold War.",
     "fact": "This is a fact! Educate yourself."
 }, 
 {
     "country": "Netherlands",
     "capital": "Amsterdam",
-    "image": "",
+    "image": "https://drive.google.com/uc?export=view&id=1mL-AHF4ay_11aRqnDtpEieBD0Ov5kLlv",
     "hint": "known for its intricate canal system, which is a UNESCO World Heritage site.",
     "fact": "The world's narrowest house is located in Amsterdam. It's only about 1 meter (3.3 feet) wide."
 },
 {
     "country": "Spain",
     "capital": "Barcelona",
-    "image": "",
+    "image": "https://drive.google.com/uc?export=view&id=1IoaFARWBS-eaXiSRuyX0P910RzBwm2el",
     "hint": "Famous for its unique architectural style, including the stunning basilica Sagrada Família.",
     "fact": "Barcelona has its own patron saint, Saint Eulalia, whose feast day is celebrated on February 12th."
 },
 {
     "country": "Egypt",
     "capital": "Cairo",
-    "image": "",
+    "image": "https://drive.google.com/uc?export=view&id=1WVxt2ZuZNdAKoid5uzez8l6gLGb1c4XL",
     "hint": "This city is home to the iconic Giza Pyramids.",
     "fact": "Cairo is one of the most populous cities in Africa and the Arab world, with a population that exceeds 20 million people."
 },
 {
     "country": "Australia",
     "capital": "Canberra",
-    "image": "",
+    "image": "https://drive.google.com/uc?export=view&id=1aqMNdt33qjiYIUpOBCQ5kiC2pdmOYwVB",
     "hint": "It is the capital city of Australia.",
     "fact": "Canberra is home to the Australian War Memorial, which serves as a commemorative site for those who have served and died in conflicts involving Australia."
 },
 {
     "country": "Japan",
     "capital": "Tokyo",
-    "image": "",
+    "image": "https://drive.google.com/uc?export=view&id=1wjZDEYIsDHqv-Eb-tH1Vl8do7FR1B1AD",
     "hint": "This city is known for its efficient and extensive public transportation system.",
     "fact": "Tokyo has the world's busiest pedestrian crossing, known as the Shibuya Crossing. "
 },
 {
     "country": "Canada",
     "capital": "Ottawa",
-    "image": "",
+    "image": "https://drive.google.com/uc?export=view&id=1W9OdrfgAQEfw2Gj8_bbgLpmkRXobRW9z",
     "hint": "Has a canal that turns into the world's largest ice rink.",
     "fact": "Ottawa is the second coldest national capital in the world, after Ulaanbaatar in Mongolia."
 },
 {
     "country": "New Zealand",
     "capital": "Wellington",
-    "image": "",
+    "image": "https://drive.google.com/uc?export=view&id=1exRKFNNTMTEQq8FygIUZp5ivdC4HQ8M8",
     "hint": "Renowned for its picturesque harbor setting, nestled between rolling hills.",
     "fact": "Wellington is known for its strong winds, and it even has a nickname, 'Windy Wellington.'"
 },
 {
-    "country": "France",
-    "capital": "Paris",
-    "image": "",
-    "hint": "Often referred to as the 'City of Love' or the 'City of Lights.'",
+    "country": "India",
+    "capital": "Bangladesh",
+    "image": "https://drive.google.com/uc?export=view&id=19wbDoZD6mqMJFOdetyDtZCcWbJsnIYYg",
+    "hint": "Home to thethe world's largest river delta",
     "fact": "The Eiffel Tower in Paris can grow taller during the summer. Due to the expansion of iron when exposed to heat."
 },
 {
-    "country": "Tunisia",
-    "capital": "Tunis",
-    "image": "",
-    "hint": "Has some great couscous",
-    "fact": "The ancient city of Carthage, located in present-day Tunisia, was once a powerful and influential center of trade and civilization in the Mediterranean."
+    "country": "Belgium",
+    "capital": "Brussels",
+    "image": "https://drive.google.com/uc?export=view&id=1YivlFY4zZfiPGab2Ej9lnchDVYteKlqu",
+    "hint": "This city serves as the de facto capital of the European Union.",
+    "fact": " The Atomium, an iconic building and museum in Brussels, was constructed for the 1958 Brussels World's Fair."
 },
 {
-    "country": "Brazil",
-    "capital": "Brasilia",
-    "image": "",
-    "hint": "The city's design was influenced by the principles of urban planner Lúcio Costa.",
-    "fact": "Brasília is a designated UNESCO World Heritage Site due to its unique and innovative urban planning."
+    "country": "Chile",
+    "capital": "Santiago",
+    "image": "https://drive.google.com/uc?export=view&id=17PDfdwAtx_TWs9vMoAsNvw1fVVrzb1S9",
+    "hint": " It lies on the canalized Mapocho River",
+    "fact": "Santiago is home to La Moneda Palace, the presidential palace of Chile. It has a historical significance as it was the site of a pivotal event during the 1973 military coup."
 },
 {
-    "country": "Venezuela",
-    "capital": "Caracas",
-    "image": "",
-    "hint": "known for its dramatic setting nestled in a valley surrounded by mountains.",
-    "fact": "Caracas is one of the few major cities in the world where you can experience the phenomenon of a 'Solar Noon'."
+    "country": "Cuba",
+    "capital": "Havana",
+    "image": "https://drive.google.com/uc?export=view&id=1iOw0ymP7NNzwWUWVwvzycBpRJq_6t5o8",
+    "hint": "Known for their well-preserved vintage cars and cigars.",
+    "fact": "The historic center of Havana, known as Old Havana (Habana Vieja), is a UNESCO World Heritage Site. It's characterized by its cobblestone streets, colorful buildings, and historic landmarks."
 },
 {
-    "country": "Lebanon",
-    "capital": "Beirut",
-    "image": "",
-    "hint": "This city is situated along the Mediterranean coast and is famous for its resilience.",
-    "fact": "Beirut was referred to as the 'Paris of the Middle East' due to its reputation as a cosmopolitan and fashionable city."
+    "country": "Ecuador",
+    "capital": "Quito",
+    "image": "https://drive.google.com/uc?export=view&id=1HTF87mZzrMHwuFK1iVILJx6v1kgM0bZK",
+    "hint": "Located high in the Andes Mountains, making it one of the world's highest capital cities.",
+    "fact": "Quito's Old Town, known as the 'Historic Center of Quito', is one of the best preserved colonial cities in the Americas."
 },
 {
-    "country": "Nicaragua",
-    "capital": "Managua",
-    "image": "",
-    "hint": "Known for its location beside the largest lake in Central America.",
-    "fact": "Managua has experienced several earthquakes throughout its history, with the most devastating one occurring in 1972."
+    "country": "Laos",
+    "capital": "Vientiane",
+    "image": "https://drive.google.com/uc?export=view&id=1ZqSMuWK-T-jJYxyvfmMzFWu3lDiupZ_6",
+    "hint": "This city is situated along the banks of the Mekong River and offers a blend of traditional Lao culture and modern influences.",
+    "fact": "Vientiane is home to the Pha That Luang, a stunning golden stupa and one of the most important national monuments in Laos. It is considered a symbol of both the Buddhist faith and the sovereignty of the Lao people."
 },
 {
-    "country": "Dominican",
-    "capital": "Santo Domingo",
-    "image": "",
-    "hint": "Holds the distinction of being the oldest continuously inhabited European settlement in the Americas.",
-    "fact": "Santo Domingo was founded by Bartholomew Columbus, the brother of Christopher Columbus."
+    "country": "Luxembourg",
+    "capital": "Luxembourg City",
+    "image": "https://drive.google.com/uc?export=view&id=1g-wztzqafOHuXzKfV4GcWdHhQJWi0EoL",
+    "hint": "A small European country, surrounded by Belgium, France and Germany.",
+    "fact": "Luxembourg City is a UNESCO World Heritage Site due to its well-preserved historical fortifications and the Old Quarter."
 },
 {
     "country": "China",
     "capital": "Beijing",
-    "image": "",
+    "image": "https://drive.google.com/uc?export=view&id=1vocwdszSFlAuzXulfn3XdkVaSEjjOFST",
     "hint": "Has a history spanning over 3,000 years, making it one of the world's oldest and most culturally significant cities.",
     "fact": "The Temple of Heaven in Beijing is a masterpiece of Ming Dynasty architecture and is known for its iconic Hall of Prayer for Good Harvests."
 },
 {
-    "country": "Nepal",
-    "capital": "Kathmandu",
-    "image": "",
-    "hint": "Nestled in a valley surrounded by the majestic Himalayan mountain range.",
-    "fact": "This is a fact! Educate yourself."
+    "country": "Jamaica",
+    "capital": "Kingston",
+    "image": "https://drive.google.com/uc?export=view&id=18-I6KseDDEsLFhFwuXQ56Y3gJ85RxvEc",
+    "hint": "Had a well known bob sledding team, made better known by the movie Cool Runnings.",
+    "fact": "Kingston is the birthplace of reggae music."
 },
 {
-    "country": "Poland",
-    "capital": "Warsaw",
-    "image": "",
-    "hint": "The nations favourite: Pierogi.",
-    "fact": "After the war, skilled craftsmanship and historical records were used to recreate the city's charming medieval architecture, making it a testament to both Poland's history and determination."
+    "country": "Philippines",
+    "capital": "Manila",
+    "image": "https://drive.google.com/uc?export=view&id=1QbvtpAIMbbchZnhKgvV8wj5OAIDUeIEU",
+    "hint": "Home to one of the best dishes ever made: Adobo",
+    "fact": "This city is located on the western side of Luzon Island and is often referred to as the 'Pearl of the Orient', reflecting its natural beauty and historical significance."
 },
 {
-    "country": "Ghana",
-    "capital": "Accra",
-    "image": "",
-    "hint": "This coastal city is renowned for its beautiful beaches along the Gulf of Guinea.",
-    "fact": "Accra is home to Kwame Nkrumah Mausoleum, a memorial dedicated to Kwame Nkrumah, the first President of Ghana."
+    "country": "Qatar",
+    "capital": "Doha",
+    "image": "https://drive.google.com/uc?export=view&id=1m10E5xk5JKANeL-n0xCV8S1H6hCNoENv",
+    "hint": "This capital city is known for its modern skyline, luxurious architecture.",
+    "fact": "Doha is home to the Museum of Islamic Art, a world-class cultural institution designed by architect I. M. Pei."
 },
 {
-    "country": "Iraq",
-    "capital": "Baghdad",
-    "image": "",
-    "hint": "This is a hint, get used to it",
-    "fact": "This is a fact! Educate yourself."
+    "country": "North Korea",
+    "capital": "Pyongyang",
+    "image": "https://drive.google.com/uc?export=view&id=13ShSUnrqMVyfQPRe678-YGSV70py4Hex",
+    "hint": "Known as the 'Capital of the Revolution.",
+    "fact": "Pyongyang has several iconic landmarks, including the Juche Tower, which stands as a symbol of the Juche ideology."
 },
 {
     "country": "Iran",
     "capital": "Tehran",
-    "image": "",
-    "hint": "This is a hint, get used to it",
-    "fact": "This is a fact! Educate yourself."
+    "image": "https://drive.google.com/uc?export=view&id=1A4UUUsVZQZRIMTaw3u74ZZPS32Cx_dLM",
+    "hint": " This country is home to the ancient city of Babylon.",
+    "fact": "The Tigris and Euphrates Rivers flow through this country, historically referred to as the 'Cradle of Civilization'."
 },
 {
-    "country": "Azerbaijan",
-    "capital": "Baku",
-    "image": "",
-    "hint": "This is a hint, get used to it",
-    "fact": "This is a fact! Educate yourself."
+    "country": "Thailand",
+    "capital": "Bangkok",
+    "image": "https://drive.google.com/uc?export=view&id=1JWuN98knXMKjNkw5swEbvySCLVkoy9x6",
+    "hint": "Is home to the Khlong Toei Market, one of the largest fresh markets in Southeast Asia.",
+    "fact": "Thailand is home to Wat Phra Kaew, also known as the Temple of the Emerald Buddha, located within the Grand Palace complex in Bangkok."
 },
 {
-    "country": "Maldives",
-    "capital": "Malé",
-    "image": "",
-    "hint": "This is a hint, get used to it",
-    "fact": "This is a fact! Educate yourself."
+    "country": "Rwanda",
+    "capital": "Kigali",
+    "image": "https://drive.google.com/uc?export=view&id=112VD7Zco1cRf-kpC6whFWfea5vkJn2uo",
+    "hint": "Known as the land of a thousand hills.",
+    "fact": "Kigali is one of the few African cities to ban plastic bags, emphasizing its commitment to environmental sustainability."
 },
 {
-    "country": "Czech Republic",
-    "capital": "Prague",
-    "image": "",
-    "hint": "This is a hint, get used to it",
-    "fact": "This is a fact! Educate yourself."
+    "country": "Samoa",
+    "capital": "Apia",
+    "image": "https://drive.google.com/uc?export=view&id=1ysWliZxoye64i6p-j19QJifDW-nHkgTv",
+    "hint": "Located on the northern coast of Upolu island, and is known for its laid-back atmosphere and beautiful coastal surroundings.",
+    "fact": "The city's central clock tower, known as the Clock Tower of Samoa, is a prominent landmark and serves as a memorial to the soldiers of Samoa who served in World War I."
 },
 {
-    "country": "Finland",
-    "capital": "Helsinki",
-    "image": "",
-    "hint": "This is a hint, get used to it",
-    "fact": "This is a fact! Educate yourself."
+    "country": "Sierra Leone",
+    "capital": "Freetown",
+    "image": "https://drive.google.com/uc?export=view&id=19eMBJ9DVP0TnmU0lcs--LA_pkY1eCH3q",
+    "hint": "Was founded in 1792 as a settlement for freed slaves and was established by British abolitionists.",
+    "fact": "Freetown is home to the Cotton Tree, a large and ancient cotton tree that holds cultural and historical significance for the people of Sierra Leone."
 },
 {
     "country": "Guyana",
     "capital": "Georgetown",
-    "image": "",
-    "hint": "This is a hint, get used to it",
-    "fact": "This is a fact! Educate yourself."
+    "image": "https://drive.google.com/uc?export=view&id=1lutUhiF1DtZXOixqKLo_Ai9cwKykMwVV",
+    "hint": "The city is located along the Demerara River's estuary and serves as an important cultural, political, and economic center.",
+    "fact": "Georgetown is home to the famous wooden St. George's Cathedral, which is one of the world's tallest wooden buildings."
 },
 {
-    "country": "Austria",
-    "capital": "Vienna",
-    "image": "",
-    "hint": "This is a hint, get used to it",
-    "fact": "This is a fact! Educate yourself."
+    "country": "Somalia",
+    "capital": "Mogadishu",
+    "image": "https://drive.google.com/uc?export=view&id=1OeTjvhBNzz6h9tc5M9TBughnmXerV0vY",
+    "hint": "It was once a thriving center of trade and culture along the ancient maritime Silk Road, connecting East Africa with the Arabian Peninsula.",
+    "fact": "The architecture of Mogadishu is a blend of different influences, including Arab, Ottoman, and Italian styles."
 },
 {
-    "country": "Uzbekistan",
-    "capital": "Tashkent",
-    "image": "",
-    "hint": "This is a hint, get used to it",
-    "fact": "This is a fact! Educate yourself."
+    "country": "Taiwan",
+    "capital": "Taipei City",
+    "image": "https://drive.google.com/uc?export=view&id=1CAAfsxS9ZEaVeeG-1_AJI771MOn6yCKx",
+    "hint": "Tea culture, producing a variety of high-quality teas, including oolong, green, and black teas.",
+    "fact": "This island nation is known for its stunning natural landscapes, including lush mountains, beautiful coastlines, and hot springs."
 },
 {
-    "country": "Maldives",
-    "capital": "Malé",
-    "image": "",
-    "hint": "This is a hint, get used to it",
-    "fact": "This is a fact! Educate yourself."
+    "country": "Greece",
+    "capital": "Athens",
+    "image": "https://drive.google.com/uc?export=view&id=1-iTDi-BRTn-Qy2zv9pgIpQn44natVMcG",
+    "hint": "This country is famous for its ancient history, encompassing legendary mythology, classical architecture.",
+    "fact": "The Parthenon, a magnificent temple dedicated to the goddess Athena, is located atop the Acropolis in Athens, Greece."
 }]
