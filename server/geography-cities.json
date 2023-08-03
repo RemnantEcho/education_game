@@ -2,124 +2,208 @@
     "country": "England",
     "capital": "London",
     "image": "./assets/england-capital.png",
-    "hint": "This is a hint, get used to it",
-    "fact": "This is a fact! Educate yourself."
+    "hint": "Historic city located along the River Thames.",
+    "fact": "The London Underground is the oldest underground railway network in the world."
 }, 
 {
     "country": "Germany",
     "capital": "Berlin",
     "image": "",
-    "hint": "This is a hint, get used to it",
+    "hint": "The city was divided by a famous wall during the Cold War.",
     "fact": "This is a fact! Educate yourself."
 }, 
 {
     "country": "Netherlands",
     "capital": "Amsterdam",
     "image": "",
-    "hint": "This is a hint, get used to it",
-    "fact": "This is a fact! Educate yourself."
+    "hint": "known for its intricate canal system, which is a UNESCO World Heritage site.",
+    "fact": "The world's narrowest house is located in Amsterdam. It's only about 1 meter (3.3 feet) wide."
 },
 {
     "country": "Spain",
     "capital": "Barcelona",
     "image": "",
-    "hint": "This is a hint, get used to it",
-    "fact": "This is a fact! Educate yourself."
+    "hint": "Famous for its unique architectural style, including the stunning basilica Sagrada Família.",
+    "fact": "Barcelona has its own patron saint, Saint Eulalia, whose feast day is celebrated on February 12th."
 },
 {
     "country": "Egypt",
     "capital": "Cairo",
     "image": "",
-    "hint": "This is a hint, get used to it",
-    "fact": "This is a fact! Educate yourself."
+    "hint": "This city is home to the iconic Giza Pyramids.",
+    "fact": "Cairo is one of the most populous cities in Africa and the Arab world, with a population that exceeds 20 million people."
 },
 {
     "country": "Australia",
     "capital": "Canberra",
     "image": "",
-    "hint": "This is a hint, get used to it",
-    "fact": "This is a fact! Educate yourself."
+    "hint": "It is the capital city of Australia.",
+    "fact": "Canberra is home to the Australian War Memorial, which serves as a commemorative site for those who have served and died in conflicts involving Australia."
 },
 {
     "country": "Japan",
     "capital": "Tokyo",
     "image": "",
-    "hint": "This is a hint, get used to it",
-    "fact": "This is a fact! Educate yourself."
+    "hint": "This city is known for its efficient and extensive public transportation system.",
+    "fact": "Tokyo has the world's busiest pedestrian crossing, known as the Shibuya Crossing. "
 },
 {
     "country": "Canada",
     "capital": "Ottawa",
     "image": "",
-    "hint": "This is a hint, get used to it",
-    "fact": "This is a fact! Educate yourself."
+    "hint": "Has a canal that turns into the world's largest ice rink.",
+    "fact": "Ottawa is the second coldest national capital in the world, after Ulaanbaatar in Mongolia."
 },
 {
     "country": "New Zealand",
     "capital": "Wellington",
     "image": "",
-    "hint": "This is a hint, get used to it",
-    "fact": "This is a fact! Educate yourself."
+    "hint": "Renowned for its picturesque harbor setting, nestled between rolling hills.",
+    "fact": "Wellington is known for its strong winds, and it even has a nickname, 'Windy Wellington.'"
 },
 {
     "country": "France",
     "capital": "Paris",
     "image": "",
-    "hint": "This is a hint, get used to it",
-    "fact": "This is a fact! Educate yourself."
+    "hint": "Often referred to as the 'City of Love' or the 'City of Lights.'",
+    "fact": "The Eiffel Tower in Paris can grow taller during the summer. Due to the expansion of iron when exposed to heat."
 },
 {
     "country": "Tunisia",
     "capital": "Tunis",
     "image": "",
-    "hint": "This is a hint, get used to it",
-    "fact": "This is a fact! Educate yourself."
+    "hint": "Has some great couscous",
+    "fact": "The ancient city of Carthage, located in present-day Tunisia, was once a powerful and influential center of trade and civilization in the Mediterranean."
 },
 {
     "country": "Brazil",
     "capital": "Brasilia",
     "image": "",
-    "hint": "This is a hint, get used to it",
-    "fact": "This is a fact! Educate yourself."
+    "hint": "The city's design was influenced by the principles of urban planner Lúcio Costa.",
+    "fact": "Brasília is a designated UNESCO World Heritage Site due to its unique and innovative urban planning."
 },
 {
     "country": "Venezuela",
     "capital": "Caracas",
     "image": "",
-    "hint": "This is a hint, get used to it",
-    "fact": "This is a fact! Educate yourself."
+    "hint": "known for its dramatic setting nestled in a valley surrounded by mountains.",
+    "fact": "Caracas is one of the few major cities in the world where you can experience the phenomenon of a 'Solar Noon'."
 },
 {
     "country": "Lebanon",
     "capital": "Beirut",
     "image": "",
-    "hint": "This is a hint, get used to it",
-    "fact": "This is a fact! Educate yourself."
+    "hint": "This city is situated along the Mediterranean coast and is famous for its resilience.",
+    "fact": "Beirut was referred to as the 'Paris of the Middle East' due to its reputation as a cosmopolitan and fashionable city."
 },
 {
     "country": "Nicaragua",
     "capital": "Managua",
     "image": "",
-    "hint": "This is a hint, get used to it",
-    "fact": "This is a fact! Educate yourself."
+    "hint": "Known for its location beside the largest lake in Central America.",
+    "fact": "Managua has experienced several earthquakes throughout its history, with the most devastating one occurring in 1972."
 },
 {
     "country": "Dominican",
     "capital": "Santo Domingo",
     "image": "",
-    "hint": "This is a hint, get used to it",
-    "fact": "This is a fact! Educate yourself."
+    "hint": "Holds the distinction of being the oldest continuously inhabited European settlement in the Americas.",
+    "fact": "Santo Domingo was founded by Bartholomew Columbus, the brother of Christopher Columbus."
 },
 {
     "country": "China",
     "capital": "Beijing",
     "image": "",
-    "hint": "This is a hint, get used to it",
-    "fact": "This is a fact! Educate yourself."
+    "hint": "Has a history spanning over 3,000 years, making it one of the world's oldest and most culturally significant cities.",
+    "fact": "The Temple of Heaven in Beijing is a masterpiece of Ming Dynasty architecture and is known for its iconic Hall of Prayer for Good Harvests."
 },
 {
     "country": "Nepal",
     "capital": "Kathmandu",
+    "image": "",
+    "hint": "Nestled in a valley surrounded by the majestic Himalayan mountain range.",
+    "fact": "This is a fact! Educate yourself."
+},
+{
+    "country": "Poland",
+    "capital": "Warsaw",
+    "image": "",
+    "hint": "The nations favourite: Pierogi.",
+    "fact": "After the war, skilled craftsmanship and historical records were used to recreate the city's charming medieval architecture, making it a testament to both Poland's history and determination."
+},
+{
+    "country": "Ghana",
+    "capital": "Accra",
+    "image": "",
+    "hint": "This coastal city is renowned for its beautiful beaches along the Gulf of Guinea.",
+    "fact": "Accra is home to Kwame Nkrumah Mausoleum, a memorial dedicated to Kwame Nkrumah, the first President of Ghana."
+},
+{
+    "country": "Iraq",
+    "capital": "Baghdad",
+    "image": "",
+    "hint": "This is a hint, get used to it",
+    "fact": "This is a fact! Educate yourself."
+},
+{
+    "country": "Iran",
+    "capital": "Tehran",
+    "image": "",
+    "hint": "This is a hint, get used to it",
+    "fact": "This is a fact! Educate yourself."
+},
+{
+    "country": "Azerbaijan",
+    "capital": "Baku",
+    "image": "",
+    "hint": "This is a hint, get used to it",
+    "fact": "This is a fact! Educate yourself."
+},
+{
+    "country": "Maldives",
+    "capital": "Malé",
+    "image": "",
+    "hint": "This is a hint, get used to it",
+    "fact": "This is a fact! Educate yourself."
+},
+{
+    "country": "Czech Republic",
+    "capital": "Prague",
+    "image": "",
+    "hint": "This is a hint, get used to it",
+    "fact": "This is a fact! Educate yourself."
+},
+{
+    "country": "Finland",
+    "capital": "Helsinki",
+    "image": "",
+    "hint": "This is a hint, get used to it",
+    "fact": "This is a fact! Educate yourself."
+},
+{
+    "country": "Guyana",
+    "capital": "Georgetown",
+    "image": "",
+    "hint": "This is a hint, get used to it",
+    "fact": "This is a fact! Educate yourself."
+},
+{
+    "country": "Austria",
+    "capital": "Vienna",
+    "image": "",
+    "hint": "This is a hint, get used to it",
+    "fact": "This is a fact! Educate yourself."
+},
+{
+    "country": "Uzbekistan",
+    "capital": "Tashkent",
+    "image": "",
+    "hint": "This is a hint, get used to it",
+    "fact": "This is a fact! Educate yourself."
+},
+{
+    "country": "Maldives",
+    "capital": "Malé",
     "image": "",
     "hint": "This is a hint, get used to it",
     "fact": "This is a fact! Educate yourself."

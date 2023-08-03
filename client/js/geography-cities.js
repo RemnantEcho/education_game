@@ -203,7 +203,7 @@ const displayInfoOverlay = (e) => {
     let displayHeader = document.createElement('h2');
     displayHeader.classList.add('info-header');
     displayHeader.classList.add('center-horizontal');
-    displayHeader.textContent = "Info";
+    displayHeader.textContent = "Help";
 
     let displayParagraph = document.createElement('p');
     displayParagraph.classList.add('info-text');
@@ -266,7 +266,7 @@ const checkCorrect = (e) => {
         }
     }
 
-    if (capital.toUpperCase() === inputString.toUpperCase()) {
+    if (capital.toUpperCase().replace(/\s+/g, '') === inputString.toUpperCase().replace(/\s+/g, '')) {
         scoreCount++;
         displayResultOverlay(0);
     }
@@ -377,7 +377,7 @@ const generateDropZones = () => {
 }
 
 const generateButtons = () => {
-    let currentCapital = String(cities[questionCount-1].capital).toUpperCase();
+    let currentCapital = String(cities[questionCount-1].capital).toUpperCase().replace(/\s+/g, '');
     let splitCapital = String(currentCapital).split('');
     let limit = 15;
 
