@@ -388,6 +388,18 @@ main {
     /* color: #ededed; */
 }
 
+.history-button {
+    background-color: #8e0e1e;
+}
+
+.history-button:hover {
+    background-color: #b63445;
+}
+
+.history-text {
+    color: #8e0e1e;
+}
+
 /* .geography-item:hover {
     background-color: #ededed;
 } */
