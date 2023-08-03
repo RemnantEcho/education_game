@@ -2,7 +2,8 @@ const cors = require('cors');
 const express = require('express');
 const app = express();
 const port = require('dotenv')
-
+const fs = require('fs');
+const messages = require("./messages.json");
 const flags = require("./country-flags.json");
 const capitals = require("./capital-cities.json");
 const history = require("./history-images.json");
@@ -10,6 +11,7 @@ const logger = require("./logger");
 app.use(logger);
 app.use(cors());
 app.use(express.json());
+
 
 
 app.get("/", (req, res) => {
@@ -71,6 +73,7 @@ app.get("/history", (req,res) => {
     res.send(history)
 })
 
+
 // shuffling history images to get 10
 app.get("/history/10", (req, res) => {
     const shuffledArr = history.sort(() => Math.random() - 0.5);
@@ -82,6 +85,21 @@ app.get("/history/20", (req, res) => {
     res.send(shuffledArr.slice(0, 20))
 })
 
+app.get("/messages", (req,res) => {
+    res.send(messages)
+})
 
-
+app.post('/messages', (req, res) => {
+    const newMessage = req.body
+    
+    messages.push(newMessage)
+    fs.writeFile('/tmp/messages.json', JSON.stringify(messages), (error) => {
+        if (error) {
+            console.log(error)
+            res.status(500).send('Failed to add message')
+        } else {
+            res.status(201).send('Message added')
+        }
+    })
+})
 module.exports = app;

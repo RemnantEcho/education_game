@@ -112,6 +112,10 @@ html, body {
     margin-left: auto;
 }
 
+.flex-display {
+    display: flex;
+}
+
 .hide {
     display: none;
 }

@@ -217,7 +217,7 @@ const displayInfoOverlay = () => {
     let displayHeader = document.createElement('h2');
     displayHeader.classList.add('info-header');
     displayHeader.classList.add('center-horizontal');
-    displayHeader.textContent = "Info";
+    displayHeader.textContent = "Help";
 
     let displayParagraph = document.createElement('p');
     displayParagraph.classList.add('info-text');
@@ -372,11 +372,7 @@ const reinit = () => {
     summaryMenu.classList.add('hide');
     roundHandler();
     
-
     // displayButtons(2);
-    
-    
-
     // console.log('Restarting');
 }
 
