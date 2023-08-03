@@ -53,7 +53,7 @@ h2 {
     width: 400px;
     height: 225px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -62,12 +62,6 @@ h2 {
     box-shadow: 0.5px 0.5px 5px rgb(100 100 100);
     filter: grayscale(0%);
     transition: filter 0.5s, transform 0.5s;
-}
-
-.box:hover {
-    filter: grayscale(100%);
-    transform: scale(1.075);
-
 }
 
 .box img {
@@ -81,14 +75,20 @@ h2 {
     font-weight: bold;
     font-size: 40px;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    /* top: 50%; */
+    /* left: 50%; */
     text-align: center;
     width: 100%;
-    margin: auto;
+    /* margin: auto; */
     text-shadow: 0 0 6px #545454;
     color: white;
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
+
+}
+
+.box:hover {
+    filter: grayscale(100%);
+    transform: scale(1.075);
 
 }
 

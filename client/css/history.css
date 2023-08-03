@@ -9,7 +9,7 @@ html, body {
     overflow: hidden;
 }
 body {
-    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 68%, rgb(212 138 147) 100%);
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 68%, rgba(220, 160, 167, 1) 100%);
 
     background-repeat: no-repeat;
     background-size: cover;
