@@ -33,7 +33,7 @@ const urlParam = window.location.search;
 // Temp Fetch
 async function fetchImages(num) {
 
-    return fetch(`http://localhost:3000/history?amount=${num}`)
+    return fetch(`https://education-game.onrender.com/history?amount=${num}`)
       .then((response) => response.json())
       .then((data) => {
         images = [];
