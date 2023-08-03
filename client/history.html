@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./css/global-styles.css">
+    <link rel="stylesheet" href="./css/history.css">
+    <script defer src="./js/global.js"></script>
+    <!-- <script defer src="./js/history.js"></script> -->
+    <title>History</title>
+</head>
+<body>
+    <nav class="history-bg">
+        <div id="nav-left-buttons" class="center-vertical">
+            <a href="./homepage.html" id="home-icon" class="center-vertical history-nav-icon nav-button nav-icon"></a>
+            <a href="#" id="subject-icon" class="center-vertical history-nav-icon nav-button nav-icon"></a>
+            <a href="./about.html" id="about-icon" class="center-vertical history-nav-icon nav-button nav-icon"></a>
+        </div>
+        <div id="nav-center" class="center-horizontal center-vertical"><h1 id="title">History</h1></div>
+        <div id="nav-right-buttons" class="center-vertical">
+            <a href="#" id="account-icon" class="center-vertical history-nav-icon nav-button nav-icon"></a>
+        </div>
+    </nav>
+    <div id="subject-dropdown" class="dropdown-bar history-dropdown-bg hide">
+        <a href="./geography.html" class="dropdown-item history-dropdown-item"><img src="./assets/geography-icon.png" class="dropdown-icon" alt="Geography">Geography</a>
+        <a href="./history.html" class="dropdown-item history-dropdown-item"><img src="./assets/history-icon.png" class="dropdown-icon">History</a> 
+    </div>
+    <main>
+        <img id="subject-banner" class="center-horizontal" src="./assets/history-banner.jpeg"/>
+        <h2 id="subject-header" class="center-horizontal">Welcome to History</h2>
+        <section id="list-section" class="center-horizontal history-scroll">
+            <ul id="main-list">
+                <li>
+                    <div href="#" class="list-item history-item center-vertical">
+                        <p class="list-item-title">General Knowledge</p>
+                        <div class="list-item-amount">
+                            <a href="./history-general.html?10" class="amount-block">10</a>
+                            <a href="./history-general.html?20" class="amount-block">20</a>
+                            <p>How many questions do you want?</p>
+                        </div>
+                        <div class="list-item-padder"></div>
+                        <p class="list-item-game">Date Match</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="list-item history-item center-vertical">
+                        <p class="list-item-title">Chronology</p>
+                        <div class="list-item-amount">
+                            <a href="#" class="amount-block">10</a>
+                            <a href="#" class="amount-block">20</a>
+                            <p>How many questions do you want?</p>
+                        </div>
+                        <div class="list-item-padder"></div>
+                        <p class="list-item-game">Higher Power</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

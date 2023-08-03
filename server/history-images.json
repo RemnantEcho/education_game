@@ -1,0 +1,82 @@
+    [{
+        "event": "The Fall of Rome","image": "https://sgorelick.files.wordpress.com/2015/02/fall-of-rome.jpg?w=584&h=358", "fact": "The exact date of Rome's fall is often debated, but 476 AD is widely considered a significant milestone marking the end of the Western Roman Empire.",
+        "hint": "This event marked the end of an ancient empire known for its engineering and military prowess."
+        },{"event": "The Renaissance",
+        "image": "https://assets.editorial.aetnd.com/uploads/2010/10/renaissance-gettyimages-1309914466.jpg?width=1920&height=960&crop=1920%3A960%2Csmart&quality=75 ",
+        "fact": "The printing press, invented by Johannes Gutenberg in the 15th century, played a crucial role in spreading Renaissance ideas and knowledge.",
+        "hint": "A period of cultural revival in Europe, emphasizing art, science, and humanism. "
+        },{"event": "The American Revolutionary War", "image": "https://cdn.thecollector.com/wp-content/uploads/2021/10/greatest-battles-american-revolution-war-princeton-independence.jpg?width=1400&quality=70 ",
+        "fact": "The Battle of Saratoga in 1777 was a turning point in the war, as the American victory convinced France to openly support the American cause.",
+        "hint": "The war that led to the independence of the United States from British rule. "
+        },{"event": "The French Revolution", "image": "https://assets.ltkcontent.com/images/102789/french-revolution-battle_85b8069bc6.webp ",
+        "fact": "The period during the revolution when radical leaders executed thousands of people, including King Louis XVI and Queen Marie Antoinette, is known as the Reign of Terror.",
+        "hint": "A period of radical social and political upheaval in Central Europe somewhere, leading to the overthrow of a monarchy. "
+        },{"event": "The Industrial Revolution", "image": "https://merchantsandmechanics.files.wordpress.com/2017/12/manchester-2.jpg?w=900 ",
+        "fact": "The first industrial textile mill, built by Samuel Slater in the United States in 1790, marked the beginning of the Industrial Revolution in America. ",
+        "hint": " A time of technological advancements that transformed economies and societies. "
+        },{"event": "The American Civil War", "image": "https://images.twinkl.co.uk/tw1n/image/private/t_630/u/ux/screenshot-2022-07-12-121347_ver_1.png",
+        "fact": "The Battle of Gettysburg in 1863 was one of the bloodiest battles of the war and is often considered a turning point in favor of the Union forces.",
+        "hint": "A conflict between Northern and Southern states over issues of slavery and states' rights. "
+        },{"event": "World War I", "image": "https://images.theconversation.com/files/74245/original/image-20150310-13550-157oqi9.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip ",
+        "fact": "The Christmas Truce of 1914 was a brief and unofficial cease of battle and soldiers from both sides got up exchanged greetings and played each other in a game of football. ",
+        "hint": "A global conflict involving major powers, known for trench warfare and significant casualties. "
+        },{"event": "The Russian Revolution", "image": "https://warwick.ac.uk/services/library/mrc/archives_online/digital/russia/15b-5-1-10-059_f1.jpg ",
+        "fact": "The Bolsheviks, led by Vladimir Lenin, seized power in October 1917, overthrowing the Provisional Government and establishing a communist government in Russia. ",
+        "hint": "A revolution that led to the rise of a communist government in Russia. "
+        },{"event": "The Great Depression", "image": "https://imageio.forbes.com/specials-images/imageserve/5e8aeac9b0a4e4000746c858/Men-Waiting-Outside-Al-Capone-Soup-Kitchen/960x0.jpg?format=jpg&width=960",
+        "fact": "The depression was so bad that notorious gangster Al Capone attempted to help unemployed men by offering free soup, coffee doughnuts",
+        "hint": "A severe economic crisis that affected the world, resulting in widespread unemployment. "
+        },{"event": "World War II", "image": "https://www.thoughtco.com/thmb/tfBv8BUriaVb6f7AOOxzihrildI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-3290203-59b4bfa8396e5a0010a65ecc.jpg ",
+        "fact": "The Battle of Stalingrad (1942-1943) was one of the largest and deadliest battles in history, resulting in a Soviet victory over Nazi Germany. ",
+        "hint": "Another global war, marked by mass destruction and the Holocaust. "
+        },{"event": "The Holocaust", "image": "https://ichef.bbci.co.uk/news/976/cpsprodpb/12FDA/production/_110668777_gettyimages-89277106-1.jpg.webp ",
+        "fact": "he Wannsee Conference in 1942 was a meeting of Nazi officials where the 'Final Solution', the plan for the systematic extermination of Jews, was formalized.",
+        "hint": "The systematic genocide of millions of Jews by Nazi Germany. "
+        },{"event": "The Cold War", "image": "https://images.csmonitor.com/csm/2022/02/0201%20COLDWAR%20PROTEST.jpg?alias=standard_900x600 ",
+        "fact": "The Cuban Missile Crisis in 1962 brought the United States and the Soviet Union to the brink of nuclear war over the placement of Soviet missiles in Cuba. ",
+        "hint": "A period of geopolitical tension between the United States and the Soviet Union. "
+        },{"event": "The Civil Rights Movement", "image": "https://cdn.aarp.net/content/dam/aarp/politics/events-and-history/2018/02/1140-civil-rights-movements-1963-march.jpg",
+        "fact": "he March on Washington for Jobs and Freedom in 1963 culminated with Martin Luther King Jr.'s iconic 'I Have a Dream'speech. ",
+        "hint": "A movement in the United States advocating for racial equality and human rights. "
+        },{"event": "The Moon Landing", "image": "https://cdn.britannica.com/68/200268-050-CD911D9C/flag-resting-position-mission-Moon-Tranquility-Base-July-20-1969.jpg?w=600&q=60",
+        "fact": "Apollo 11 astronaut Neil Armstrong became the first person to set foot on the Moon, saying the famous words, 'That's one small step for man, one giant leap for mankind.' ",
+        "hint": "A monumental achievement in space exploration, involving a famous 'giant leap.' "
+        },{"event": "The Fall of the Berlin Wall", "image": "https://s.rfi.fr/media/display/bf9044b2-0fae-11ea-b9a2-005056a99247/w:980/p:16x9/10_berlin_wall.webp ",
+        "fact": "The fall of the Berlin Wall on November 9, 1989, led to the eventual reunification of Germany and symbolized the end of the Cold War.",
+        "hint": "An iconic event symbolizing the end of the Cold War and German reunification. "
+        },{"event": "The September 11 Attacks", "image": "https://deseret.brightspotcdn.com/dims4/default/d23b061/2147483647/strip/true/crop/2000x1332+0+4/resize/1300x866!/format/webp/quality/90/?url=https%3A%2F%2Fcdn.vox-cdn.com%2Fthumbor%2FhZbT4eaFqcW4k8-Qsr5mjEVSGkQ%3D%2F0x0%3A2000x1340%2F2000x1340%2Ffilters%3Afocal%281000x670%3A1001x671%29%2Fcdn.vox-cdn.com%2Fuploads%2Fchorus_asset%2Ffile%2F22832804%2Fmerlin_2772952.jpg",
+        "fact": "The 9/11 attacks resulted in the collapse of the World Trade Center Twin Towers in New York City and caused extensive damage to the Pentagon.",
+        "hint": "A series of terrorist attacks in the United States that changed the world. "
+        },{"event": "The Arab Spring", "image": " https://i.natgeofe.com/n/c9425e5e-614d-459f-8653-d04e19938757/01-arab-spring.jpg?w=636&h=424",
+        "fact": "The self-immolation of Mohamed Bouazizi in Tunisia in 2010 triggered a series of protests that led to the overthrow of several authoritarian regimes in the Middle East and North Africa. ",
+        "hint": "A series of uprisings demanding political reforms in the Arab world. "
+        },{"event": "Brexit", "image": "https://images.lbc.co.uk/images/416877?crop=16_9&width=660&relax=1&format=webp&signature=2D2Wgl8t4KBmzILKo7TUjR5VrNo=",
+        "fact": "On June 23, 2016, the United Kingdom voted in a referendum to leave the European Union, leading to a complex and ongoing process of separation.",
+        "hint": "The European country's decision to leave a major European organization. "
+        },{"event": "COVID-19 Pandemic", "image": "https://blogs.worldbank.org/sites/default/files/styles/hero/public/2021-07/hero.png.webp?itok=ZnZJvwhT",
+        "fact": "The COVID-19 virus is caused by the severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) and was first identified in Wuhan, China, in December 2019.",
+        "hint": "A global health crisis caused by a novel virus."
+        },{"event": "Hong Kong Protests", "image": "https://ichef.bbci.co.uk/news/976/cpsprodpb/16460/production/_109223219_gettyimages-1172856156.jpg.webp ",
+        "fact": "The protests in Hong Kong, known as the 'Umbrella Movement', involved demands for greater democratic rights and autonomy from China. ",
+        "hint": "Protests in this city demanded greater autonomy and democratic rights. "
+        },{"event": "The Black Death", "image": "https://media.hswstatic.com/eyJidWNrZXQiOiJjb250ZW50Lmhzd3N0YXRpYy5jb20iLCJrZXkiOiJnaWZcL2JsYWNrLWRlYXRoLTEtYmlnZ2VyLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODI4fSwidG9Gb3JtYXQiOiJhdmlmIn19",
+        "fact": "The Black Death is believed to have originated in Central Asia and was one of the deadliest pandemics in human history, killing millions of people.",
+        "hint": "A devastating pandemic that swept through Europe and Asia. "
+        },{"event": "The Signing of the Declaration of Independence" , "image": "https://4.bp.blogspot.com/-qw2MKp-GEQg/ThzmvDs7P2I/AAAAAAAADOQ/iwVAo08dnSE/s1600/declaration_independence.jpg ",
+        "fact": "The Declaration of Independence was adopted by the Continental Congress on July 4, 1776, officially declaring the thirteen American colonies as independent states.",
+        "hint": "A historical document declaring a nation's independence. "
+    },
+        {"event": "The Titanic Sinking", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/St%C3%B6wer_Titanic.jpg/300px-St%C3%B6wer_Titanic.jpg ",
+        "fact": "The RMS Titanic, deemed 'unsinkable,' hit an iceberg and sank during its maiden voyage, resulting in the loss of over 1,500 lives. ",
+        "hint": " A tragic event involving a 'floating palace' that met a disaster on its maiden voyage."
+        },{"event": "The Apollo 13 Mission", "image": "https://cdn.mos.cms.futurecdn.net/kAgHP3pX3vmf4ZHFZNL4ai-970-80.jpg.webp ",
+        "fact": "The Apollo 13 mission faced a life-threatening oxygen tank explosion, but the ingenuity of NASA's team and the astronauts' courage led to a successful return to Earth. "
+        ,
+        "hint": "A space mission that overcame a life-threatening incident in space."
+    }, {
+        "event": "The Berlin Airlift",
+        "image": "https://www.pbs.org/wgbh/americanexperience/media/filer_public_thumbnails/filer_public/81/37/813783bf-2382-4242-8e46-59425907db01/airlift_newspaper.jpg__1000x624_q85_crop_subsampling-2_upscale.jpg",
+        "fact": "During the Soviet blockade of West Berlin, the Western Allies organized an airlift operation to supply the city with food, fuel, and other necessities, showcasing determination and resilience.",
+        "hint": "An unprecedented humanitarian operation during a Soviet blockade."
+    }
+    ]

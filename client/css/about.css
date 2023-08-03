@@ -1,0 +1,305 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: inline-block;
+  color: wheat;
+  text-align: center;
+  padding: 10px 14px;
+  text-decoration: none;
+}
+
+.nav-icon {
+    background-color: #e09840;
+
+}
+
+.mission h1 {
+  font-size: 75px;
+  color:white;
+  font-family: 'Gaegu', cursive;
+}
+
+.mission h2 {
+  font-family: 'Gaegu', cursive;
+  color: white;
+}
+
+.mission p {
+  font-size: 20px;
+  width: 50%;
+  font-family: 'Gaegu', cursive;
+  margin: 0;
+  padding:0;
+  color:white;
+    
+}
+
+.emphasis {
+  color:wheat;
+  font-weight: bold;
+}
+
+.about-us {
+  width: 25%;
+  color: white;
+}
+
+.mission {
+  border-bottom: black;
+  position: relative;
+  background: url('../assets/blackboard-bg.png') repeat top center/cover;  
+  background-position: 90%;
+  height:600px;
+  display:inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.9rem;
+}
+
+.right {
+  float:right;
+}
+
+.people {
+  margin:50px;
+  font-weight: bold;
+  font-family: 'Lobster', cursive;
+  color: #FFA500;
+  margin: 10px;
+  font-size: 35px;
+}
+
+.research {
+  display: flex;
+  margin: 10px;
+  width: 100%;
+}
+
+h2 {
+    color: #FFA500;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 75px;
+    font-family: 'Lobster', cursive;
+    padding: 0px 10px 0px 10px;
+    position: relative;
+    text-align: center;
+} 
+
+.research h3 {
+    padding: 0px 10px 0px 10px;
+    position: relative;
+    text-align: center;
+    display: flex;
+} 
+
+.research h3 {
+  padding: 0px 10px 0px 10px;
+  position: relative;
+  text-align: center;
+  display: flex;
+} 
+
+.research .quote {
+  font-style: italic;
+  margin: 40px;
+  padding: 20px 10px 30px 0px;
+  display: flex;
+  width: 80%;
+  position: relative;
+  text-align: center;
+  color: #808080
+}
+
+.student-wrapper {
+  width: 33.3%;
+}
+
+.parent-wrapper {
+  width: 33.3%
+}
+
+.teacher-wrapper {
+  width: 33.3%;
+}
+
+.fade_line {
+  height: 1px;
+  background-color: #E6E6F9;
+  width: 80%;
+  margin: 0 auto;
+  background-image: linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
+}
+
+.us {
+  border-top: #808080;
+  font-family: 'Lobster', cursive;
+  padding: 20px;
+}
+
+#about-us {
+  color: #FFA500;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.us p {
+    font-family: "Inter", cursive;
+}
+
+.photos {
+  display: inline;
+  margin: 40px;
+  padding: 20px 10px 30px 0px;
+  display: flex;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.member {
+    width:20%;
+}
+
+.photos h2 {
+    text-decoration: none;
+    opacity: 75%;
+}
+
+.member-wrapper {
+    display:flex;
+}
+
+.contact {
+    display: flex;
+    background-color: #EDEADE;
+}
+
+.team {
+  height:60%;
+  width: 60%;
+  border: 5px solid #FFA500;
+  object-fit: cover;
+}
+
+#contact-info {
+  margin:10px 0px 0px 5px;
+  padding-top: 10px;
+  padding-left: 10px;
+  background-color: #EDEADE;
+  font-family: "Lobster", cursive;
+  color: #FFA500;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.inform {
+  margin-left:20px;
+  padding:2px;
+  width:50%;
+}
+
+.location {
+    display: inline;
+    width: 25%;
+    margin-left: 10%;
+}
+
+#logo {
+  text-align: center;
+  color: green;
+}
+ 
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+.about {
+  font-weight: bold;
+}
+  
+  /* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #FFA500;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+  
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+textarea {
+  height:200px
+}
+/* Add a background color and some padding around the form */
+form {
+  padding:0px 20px 10px 5px;
+} 
+
+form h3 {
+  font-family: "Lobster", cursive;
+  color: #FFA500;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#map {
+  border: 1px solid #FFA500;
+}
+
+#map:hover {
+  border-radius: 10px;
+  border: 5px solid #45a049;
+}
+
+.location p {
+  font-family: "Lobster", cursive;
+  color: #FFA500;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.default-scroll::-webkit-scrollbar-thumb {
+  background-color:#e09840;
+  /* border-radius: 5px; */
+}
+
+.default-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: #c7883c;
+}
+
+.default-scroll::-webkit-scrollbar-button:single-button {
+  background-color: #404040;
+  display: block;
+  background-size: 20px;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+}
+
+.hide {
+  display: none;
+}
+
