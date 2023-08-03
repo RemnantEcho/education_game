@@ -4,12 +4,7 @@ main {
     justify-content: center;
     align-items: center;
 }
-body {
-    background-image: url("/client/assets/bg-history.png");
 
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 #start-menu {
     flex-direction: column;
     align-items: center;
