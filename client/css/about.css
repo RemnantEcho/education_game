@@ -24,11 +24,6 @@ li a {
   text-decoration: none;
 }
 
-.nav-icon {
-    background-color: #e09840;
-
-}
-
 .mission h1 {
   font-size: 75px;
   color:white;
@@ -81,7 +76,7 @@ li a {
   margin:50px;
   font-weight: bold;
   font-family: 'Lobster', cursive;
-  color: #FFA500;
+  /* color: #FFA500; */
   margin: 10px;
   font-size: 35px;
 }
@@ -93,7 +88,7 @@ li a {
 }
 
 h2 {
-    color: #FFA500;
+    /* color: #FFA500; */
     font-weight: bold;
     text-decoration: underline;
     font-size: 75px;
@@ -155,7 +150,7 @@ h2 {
 }
 
 #about-us {
-  color: #FFA500;
+  /* color: #FFA500; */
   font-size: 30px;
   font-weight: bold;
 }
@@ -205,7 +200,7 @@ h2 {
   padding-left: 10px;
   background-color: #EDEADE;
   font-family: "Lobster", cursive;
-  color: #FFA500;
+  /* color: #FFA500; */
   font-size: 30px;
   font-weight: bold;
 }
@@ -244,7 +239,7 @@ input[type=text], select, textarea {
   
   /* Style the submit button with a specific background color etc */
 input[type=submit] {
-  background-color: #FFA500;
+  /* background-color: #FFA500; */
   color: white;
   padding: 12px 20px;
   border: none;
@@ -254,56 +249,54 @@ input[type=submit] {
   
 /* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
+  /* background-color: #45a049; */
+}
+
+.default-button {
+  background-color: #FFA500;
+}
+
+.default-button:hover {
   background-color: #45a049;
 }
 
 textarea {
-  height:200px
+  height: 200px
 }
 /* Add a background color and some padding around the form */
 form {
-  padding:0px 20px 10px 5px;
+  padding: 0px 20px 10px 5px;
 } 
 
 form h3 {
   font-family: "Lobster", cursive;
-  color: #FFA500;
+  /* color: #FFA500; */
   font-size: 25px;
   font-weight: bold;
 }
 
 #map {
-  border: 1px solid #FFA500;
+  text-decoration: none;
 }
 
-#map:hover {
+.default-border {
   border-radius: 10px;
-  border: 5px solid #45a049;
+  border: 2px solid #FFA500;
+  transition: border .2s, box-shadow .2s;
+}
+
+.default-border:hover {
+  border-radius: 10px;
+  /* border: 5px solid #45a049; */
+  border: 2px solid #45a049;
+  box-shadow: 0 0 0 5px #45a049;
 }
 
 .location p {
   font-family: "Lobster", cursive;
-  color: #FFA500;
+  /* color: #FFA500; */
   font-weight: bold;
   font-size: 25px;
-}
-
-.default-scroll::-webkit-scrollbar-thumb {
-  background-color:#e09840;
-  /* border-radius: 5px; */
-}
-
-.default-scroll::-webkit-scrollbar-thumb:hover {
-  background-color: #c7883c;
-}
-
-.default-scroll::-webkit-scrollbar-button:single-button {
-  background-color: #404040;
-  display: block;
-  background-size: 20px;
-  width: 20px;
-  height: 20px;
-  background-repeat: no-repeat;
 }
 
 .hide {

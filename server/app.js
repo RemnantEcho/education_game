@@ -3,16 +3,16 @@ const express = require('express');
 const app = express();
 const port = require('dotenv')
 const fs = require('fs');
+
 const messages = require("./messages.json");
-const flags = require("./country-flags.json");
-const capitals = require("./capital-cities.json");
-const history = require("./history-images.json");
+const flags = require("./data/country-flags.json");
+const capitals = require("./data/geography-cities.json");
+const history = require("./data/history-images.json");
 const logger = require("./logger");
+
 app.use(logger);
 app.use(cors());
 app.use(express.json());
-
-
 
 app.get("/", (req, res) => {
     res.send("Hello");
@@ -31,8 +31,6 @@ app.get("/flags", (req, res) =>  {
         .map(({ value }) => value);
         res.send(shuffledArray.slice(0, amount));
     }
-    
-
 })
 
 app.get("/capitals", (req, res) =>  {
@@ -49,9 +47,7 @@ app.get("/capitals", (req, res) =>  {
 
         res.send(shuffledArray.slice(0, amount));
     }
-    
 })
-
 
 app.get("/history", (req, res) =>  {
     let amount = parseInt(req.query.amount);
@@ -93,7 +89,7 @@ app.post('/messages', (req, res) => {
     const newMessage = req.body
     
     messages.push(newMessage)
-    fs.writeFile('/tmp/messages.json', JSON.stringify(messages), (error) => {
+    fs.writeFile('tmp/messages.json', JSON.stringify(messages), (error) => {
         if (error) {
             console.log(error)
             res.status(500).send('Failed to add message')
