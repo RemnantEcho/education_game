@@ -1,0 +1,126 @@
+[{
+    "country": "England",
+    "capital": "London",
+    "image": "./assets/england-capital.png",
+    "hint": "This is a hint, get used to it",
+    "fact": "This is a fact! Educate yourself."
+}, 
+{
+    "country": "Germany",
+    "capital": "Berlin",
+    "image": "",
+    "hint": "This is a hint, get used to it",
+    "fact": "This is a fact! Educate yourself."
+}, 
+{
+    "country": "Netherlands",
+    "capital": "Amsterdam",
+    "image": "",
+    "hint": "This is a hint, get used to it",
+    "fact": "This is a fact! Educate yourself."
+},
+{
+    "country": "Spain",
+    "capital": "Barcelona",
+    "image": "",
+    "hint": "This is a hint, get used to it",
+    "fact": "This is a fact! Educate yourself."
+},
+{
+    "country": "Egypt",
+    "capital": "Cairo",
+    "image": "",
+    "hint": "This is a hint, get used to it",
+    "fact": "This is a fact! Educate yourself."
+},
+{
+    "country": "Australia",
+    "capital": "Canberra",
+    "image": "",
+    "hint": "This is a hint, get used to it",
+    "fact": "This is a fact! Educate yourself."
+},
+{
+    "country": "Japan",
+    "capital": "Tokyo",
+    "image": "",
+    "hint": "This is a hint, get used to it",
+    "fact": "This is a fact! Educate yourself."
+},
+{
+    "country": "Canada",
+    "capital": "Ottawa",
+    "image": "",
+    "hint": "This is a hint, get used to it",
+    "fact": "This is a fact! Educate yourself."
+},
+{
+    "country": "New Zealand",
+    "capital": "Wellington",
+    "image": "",
+    "hint": "This is a hint, get used to it",
+    "fact": "This is a fact! Educate yourself."
+},
+{
+    "country": "France",
+    "capital": "Paris",
+    "image": "",
+    "hint": "This is a hint, get used to it",
+    "fact": "This is a fact! Educate yourself."
+},
+{
+    "country": "Tunisia",
+    "capital": "Tunis",
+    "image": "",
+    "hint": "This is a hint, get used to it",
+    "fact": "This is a fact! Educate yourself."
+},
+{
+    "country": "Brazil",
+    "capital": "Brasilia",
+    "image": "",
+    "hint": "This is a hint, get used to it",
+    "fact": "This is a fact! Educate yourself."
+},
+{
+    "country": "Venezuela",
+    "capital": "Caracas",
+    "image": "",
+    "hint": "This is a hint, get used to it",
+    "fact": "This is a fact! Educate yourself."
+},
+{
+    "country": "Lebanon",
+    "capital": "Beirut",
+    "image": "",
+    "hint": "This is a hint, get used to it",
+    "fact": "This is a fact! Educate yourself."
+},
+{
+    "country": "Nicaragua",
+    "capital": "Managua",
+    "image": "",
+    "hint": "This is a hint, get used to it",
+    "fact": "This is a fact! Educate yourself."
+},
+{
+    "country": "Dominican",
+    "capital": "Santo Domingo",
+    "image": "",
+    "hint": "This is a hint, get used to it",
+    "fact": "This is a fact! Educate yourself."
+},
+{
+    "country": "China",
+    "capital": "Beijing",
+    "image": "",
+    "hint": "This is a hint, get used to it",
+    "fact": "This is a fact! Educate yourself."
+},
+{
+    "country": "Nepal",
+    "capital": "Kathmandu",
+    "image": "",
+    "hint": "This is a hint, get used to it",
+    "fact": "This is a fact! Educate yourself."
+}]
