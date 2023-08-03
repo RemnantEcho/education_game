@@ -6,7 +6,7 @@ const fs = require('fs');
 
 const messages = require("./messages.json");
 const flags = require("./data/country-flags.json");
-const capitals = require("./data/capital-cities.json");
+const capitals = require("./data/geography-cities.json");
 const history = require("./data/history-images.json");
 const logger = require("./logger");
 

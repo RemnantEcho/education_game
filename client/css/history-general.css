@@ -4,7 +4,12 @@ main {
     justify-content: center;
     align-items: center;
 }
+body {
+    background-image: url("/client/assets/bg-history.png");
 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 #start-menu {
     flex-direction: column;
     align-items: center;
@@ -87,6 +92,7 @@ main {
 }
 
 #flag-image {
+    border: solid 0.5px;
     background-color: #434343;
     object-fit: cover;
     margin: 2% auto 5% auto;
