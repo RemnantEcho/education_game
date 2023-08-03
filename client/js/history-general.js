@@ -1,3 +1,4 @@
+
 const mainContent = document.querySelector('main');
 const startMenu = document.querySelector('#start-menu');
 const quizMenu = document.querySelector('#quiz-menu');
@@ -21,111 +22,42 @@ let gameState = {
     "playing": 1
 }
 
-let images = []
+let images = [];
 let currentState;
-
 let questionCount;
 let scoreCount;
+let hasInitialised = false;
+
+const urlParam = window.location.search;
 
 // Temp Fetch
 async function fetchImages(num) {
-    return fetch(`http://localhost:3000/history/${num}`)
+
+    return fetch(`http://localhost:3000/history?amount=${num}`)
       .then((response) => response.json())
       .then((data) => {
+        images = [];
         images.push(...data);
-})
-.catch((e) => alert(e));
+        if (!hasInitialised) {
+            init();
+        }
+        else {
+            reinit();
+        }
+        
+      })
+      .catch((e) => alert(e));
+      
+   
+    
+   
+   
 }
-// const fetchImages = () => {
-
-//     images = [{
-//             "name": "Peru",
-//             "image": "./assets/peru-flag.png",
-//             "hint": "A Hint of Some Kind",
-//             "fact": "A Fun Fact that's fun for all the family"
-//         },
-//         {
-//             "name": "Egypt",
-//             "image": "./assets/egypt-flag.png",
-//             "hint": "A Hint of Some Kind",
-//             "fact": "A Fun Fact that's fun for all the family"
-//         },
-//         {
-//             "name": "Australia",
-//             "image": "./assets/australia-flag.png",
-//             "hint": "A Hint of Some Kind",
-//             "fact": "A Fun Fact that's fun for all the family"
-//         },
-//         {
-//             "name": "Austria",
-//             "image": "./assets/austria-flag.png",
-//             "hint": "A Hint of Some Kind",
-//             "fact": "A Fun Fact that's fun for all the family"
-//         },
-//         {
-//             "name": "Taiwan",
-//             "image": "./assets/taiwan-flag.png",
-//             "hint": "A Hint of Some Kind",
-//             "fact": "A Fun Fact that's fun for all the family"
-//         },
-//         {
-//             "name": "Burma",
-//             "image": "./assets/burma-flag.png",
-//             "hint": "A Hint of Some Kind",
-//             "fact": "A Fun Fact that's fun for all the family"
-//         },{
-//             "name": "Mexico",
-//             "image": "./assets/mexico-flag.png",
-//             "hint": "A Hint of Some Kind",
-//             "fact": "A Fun Fact that's fun for all the family"
-//         }
-//         ,{
-//             "name": "Argentina",
-//             "image": "./assets/argentina-flag.png",
-//             "hint": "A Hint of Some Kind",
-//             "fact": "A Fun Fact that's fun for all the family"
-//         }
-//         ,{
-//             "name": "Laos",
-//             "image": "./assets/laos-flag.png",
-//             "hint": "A Hint of Some Kind",
-//             "fact": "A Fun Fact that's fun for all the family"
-//         },
-//         {
-//             "name": "Cambodia",
-//             "image": "./assets/cambodia-flag.png",
-//             "hint": "A Hint of Some Kind",
-//             "fact": "A Fun Fact that's fun for all the family"
-//         }
-//     ]
-// }
 
 const evaluateScore = () => {
     if ((scoreCount / questionCount) * 100 >= 70) return `Great Job! You Passed!`;
     if ((scoreCount / questionCount) * 100 < 30) return `Next time revise Harder!`; 
     return `Better Luck Next Time!`; 
-}
-
-const displayButtons = (n) => {
-    let currentItem = images[questionCount-1];
-
-    console.log(currentItem);
-    
-    let tempArray = images.slice();
-    tempArray.splice(questionCount - 1, 1);
-
-    const shuffledArray = tempArray.sort(() => 0.5 - Math.random()).slice(0, n);
-    shuffledArray.push(currentItem);
-
-    console.log(shuffledArray);
-
-    tempArray = shuffledArray.sort(() => 0.5 - Math.random());
-
-    console.log(tempArray);
-
-    for (let i = 0; i < questionButtons.length; i++) {
-        questionButtons[i].textContent = `${tempArray[i].event}`;
-    }
 }
 
 const closeOverlay = (e) => {
@@ -168,7 +100,6 @@ const displayResultOverlay = (val) => {
     }
 
     let factHeader = document.createElement('h3');
-    // factHeader.classList.add('info-text');
     factHeader.classList.add('fact-header');
     factHeader.classList.add('geography-text');
     factHeader.classList.add('center-horizontal');
@@ -179,9 +110,7 @@ const displayResultOverlay = (val) => {
     displayParagraph.classList.add('center-horizontal');
     displayParagraph.textContent = `${images[questionCount - 1].fact}`;
 
-    // let quizFiller = document.createElement('div');
-    // quizFiller.classList.add('quiz-filler');
-
+  
     let nextButton = document.createElement('button');
     nextButton.classList.add('next-button');
     nextButton.classList.add('geography-button');
@@ -200,7 +129,6 @@ const displayResultOverlay = (val) => {
     overlayContent.appendChild(displayHeader);
     overlayContent.appendChild(factHeader);
     overlayContent.appendChild(displayParagraph);
-    // overlayContent.appendChild(quizFiller);
     overlayContent.appendChild(nextButton);
     quizNextOverlay.classList.remove('hide');
 }
@@ -209,12 +137,12 @@ const displayInfoOverlay = () => {
     let displayHeader = document.createElement('h2');
     displayHeader.classList.add('info-header');
     displayHeader.classList.add('center-horizontal');
-    displayHeader.textContent = "Info";
+    displayHeader.textContent = "Help";
 
     let displayParagraph = document.createElement('p');
     displayParagraph.classList.add('info-text');
     displayParagraph.classList.add('center-horizontal');
-    displayParagraph.textContent = "Guess which time period corresponds to what image, and click on the button with the one you want below the image.";
+    displayParagraph.textContent = "Guess which time period does this image belong to, and click on the button with the one you want below the image.";
 
     // let quizFiller = document.createElement('div');
     // quizFiller.classList.add('quiz-filler');
@@ -230,7 +158,6 @@ const displayInfoOverlay = () => {
     overlayContent.textContent = "";
     overlayContent.appendChild(displayHeader);
     overlayContent.appendChild(displayParagraph);
-    // overlayContent.appendChild(quizFiller);
     overlayContent.appendChild(okayButton);
     quizNextOverlay.classList.remove('hide');
 }
@@ -246,8 +173,6 @@ const displayHintOverlay = () => {
     displayParagraph.classList.add('center-horizontal');
     displayParagraph.textContent = `${images[questionCount - 1].hint}`;
 
-    // let quizFiller = document.createElement('div');
-    // quizFiller.classList.add('quiz-filler');
 
     let okayButton = document.createElement('button');
     okayButton.classList.add('okay-button');
@@ -260,7 +185,6 @@ const displayHintOverlay = () => {
     overlayContent.textContent = "";
     overlayContent.appendChild(displayHeader);
     overlayContent.appendChild(displayParagraph);
-    // overlayContent.appendChild(quizFiller);
     overlayContent.appendChild(okayButton);
     quizNextOverlay.classList.remove('hide');
 }
@@ -279,14 +203,48 @@ const checkCorrect = (e) => {
     }
 }
 
+const displayButtons = (n) => {
+    let currentItem = images[questionCount-1];
+
+    
+    let tempArray = images.slice();
+    tempArray.splice(questionCount - 1, 1);
+
+    
+    let shuffledArray = tempArray
+        .map(value => ({ value, sort: Math.random() }))
+        .sort((a, b) => a.sort - b.sort)
+        .map(({ value }) => value).slice(0, n);
+    shuffledArray.push(currentItem);
+
+    // console.log(shuffledArray);
+
+    tempArray = shuffledArray
+        .map(value => ({ value, sort: Math.random() }))
+        .sort((a, b) => a.sort - b.sort)
+        .map(({ value }) => value);
+
+
+    for (let i = 0; i < questionButtons.length; i++) {
+        questionButtons[i].textContent = `${tempArray[i].event}`;
+        questionButtons[i].addEventListener('click', checkCorrect);
+    }
+}
+
 const roundHandler = () => {
-    // console.log('Triggered');
+
+    console.log(`Image length: ` + images.length);
     if (images.length != 0) {
         switch(currentState) {
             case gameState.idle:
                 currentState = gameState.playing;
+                console.log('Playing');
                 startMenu.classList.add('hide');
                 quizMenu.classList.remove('hide');
+                flagImage.src = images[questionCount - 1]['image'];
+                quizCounter.textContent = `${questionCount}/${images.length}`;
+                displayButtons(2);
+                
             break;
             case gameState.playing:
                 currentState = gameState.idle;
@@ -304,61 +262,45 @@ const roundHandler = () => {
 
 const startGame = (e) => {
     e.preventDefault();
-    console.log('Fired');
     roundHandler();
 }
 
-
 const restart = (e) => {
     e.preventDefault();
+    fetchImages(parseInt(String(urlParam).substring(urlParam.length-2, urlParam.length)));
+}
 
+const reinit = () => {
+    console.log('Reinit');
     currentState = gameState.idle;
     questionCount = 1;
     scoreCount = 0;
 
     quizQuestion.textContent = "Which time period does this image belong to?";
-
-    // fetchImages();
-
-    displayButtons(2);
-    quizCounter.textContent = `${questionCount}/${images.length}`;
     
     summaryMenu.classList.add('hide');
     roundHandler();
-
-
-    console.log('Restarting');
+    
 }
 
 const init = () => {
     currentState = gameState.idle;
+    hasInitialised = true;
     questionCount = 1;
     scoreCount = 0;
 
     quizQuestion.textContent = "Which time period does this image belong to?";
 
-    const urlParam = window.location.search;
-    fetchImages(parseInt(String(urlParam).substring(1, urlParam.length)));
+    
 
-    // flagImage.src = images[questionCount - 1].image;
-    // displayButtons(2);
-
-    // Remove after
-    endTitle.textContent = evaluateScore();
-    scoreText.textContent = `You Scored: ${scoreCount} / ${images.length}`;
-    //
-
+    
     quizCounter.textContent = `${questionCount}/${images.length}`;
     startButton.addEventListener('click', startGame);
     quizInfo.addEventListener('click', displayInfoOverlay);
     hintButton.addEventListener('click', displayHintOverlay);
     restartButton.addEventListener('click', restart);
 
-    for (let i = 0; i < questionButtons.length; i++) {
-        questionButtons[i].addEventListener('click', checkCorrect);
-    }
 
-    // console.log('Fine');
 }
 
-init();
+fetchImages(parseInt(String(urlParam).substring(urlParam.length-2, urlParam.length)));
