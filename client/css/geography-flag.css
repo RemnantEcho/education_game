@@ -68,6 +68,7 @@ main {
 }
 
 #flag-image {
+    border: solid 0.5px;
     background-color: #434343;
     object-fit: cover;
     margin: 2% auto 5% auto;

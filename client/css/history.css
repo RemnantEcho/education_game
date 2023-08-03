@@ -8,9 +8,17 @@ html, body {
     font-family: 'Inter', sans-serif;
     overflow: hidden;
 }
+body {
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 68%, rgb(212 138 147) 100%);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 #subject-banner {
     display: flex;
+    border-radius: 5px;
+    border: solid 0.5px;
     margin: 2% auto 2% auto;
     width: 60%;
     height: 10%;
@@ -47,6 +55,7 @@ html, body {
 .list-item {
     cursor: pointer;
     text-decoration: none;
+    background-color: rgb(255 255 255);
 }
 
 .list-item:hover .list-item-amount {
