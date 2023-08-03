@@ -20,20 +20,6 @@ main {
     font-size: 1.5rem;
 }
 
-.geography-dropdown-bg {
-    background-color: #860f1d;
-}
-.geography-dropdown-item {
-    background-color: #860f1d;
-    /* color: #ededed; */
-}
-
-.geography-dropdown-item:hover {
-    background-color: #89b35f; 
-    /* color: #ededed; */
-}
-
-
 #start-button {
     width: 150px;
     height: 50px;
@@ -210,7 +196,7 @@ background-color: #d01b30;
 }
 
 .okay-button:hover {
-    background-color: #d01b30;
+    background-color: #b63445;
 }
 
 #score-text {
@@ -241,27 +227,16 @@ background-color: #d01b30;
 .end-button-margin {
     margin: 5% 5% 5% 5%;
 }
-.history-button {
-    background-color: #8e0e1e;
-}
+
 .hide {
     display: none;
 }
-#start-subject {
-    color: #8e0e1e
-}
+
 #start-button {
     background-color:#8e0e1e;
+    transition: background-color .4s;
 }
 
 #start-button:hover {
-    transition: 1s;
-    background-color: #d01b30;
-}
-.geography-bg {
-    background-color: #8e0e1e;
-}
-
-.geography-bg a {
-    background-color: #8e0e1e;
+    background-color: #b63445;
 }
