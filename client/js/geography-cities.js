@@ -32,7 +32,7 @@ const urlParam = window.location.search;
 
 const fetchCities = (num) => {
     
-    return fetch(`https://education-game.onrender.com/capitals?amount=${num}`)
+    return fetch(`http://localhost:3000/capitals?amount=${num}`)
       .then((response) => response.json())
       .then((data) => {
         cities = [];
@@ -291,18 +291,11 @@ const drag = (e) => {
 const drop = (e) => {
     e.preventDefault();
     let data = e.dataTransfer.getData("text");
-    // e.target.classList.add('dd-zone-mute');
     let button = document.getElementById(data);
     button.classList.add('dd-button-mute');
 
-    console.log(`Moving Button: ` + button.parentNode);
     let draggedParent = button.parentNode;
     let targetParent = e.target.parentNode;
-
-    // console.log(`Target Drop: ` + e.target);
-    // console.log(e.target.classList.contains('question-button'));
-    // console.log(e.target.parentNode);
-
 
     if (e.target.classList.contains('drag-drop-zone')) {
         e.target.classList.add('dd-zone-mute');
@@ -311,14 +304,7 @@ const drop = (e) => {
     if (e.target.classList.contains('question-button')) {
         let tempEl = button;
         
-
-        if (e.target.parentNode.id == 'quiz-question-buttons') {
-            // console.log('It is a question button and the parent is Quiz Questions');
-            button.classList.remove('dd-button-mute');
-            // e.target.classList.remove('dd-button-mute');
-        }
-
-        console.log('Dragged Button Parent ID: ' + button.parentNode.id);
+        if (e.target.parentNode.id == 'quiz-question-buttons') button.classList.remove('dd-button-mute');
 
         if (button.parentNode.id == 'quiz-question-buttons') {
             e.target.classList.remove('dd-button-mute');
@@ -326,19 +312,14 @@ const drop = (e) => {
         else {
             e.target.classList.add('dd-button-mute');
         }
-        
+
         draggedParent.appendChild(e.target);
         targetParent.appendChild(tempEl);
-        
     }
     else {
-        if (e.target.id == 'quiz-question-buttons') {
-            button.classList.remove('dd-button-mute');
-        }
-
+        if (e.target.id == 'quiz-question-buttons') button.classList.remove('dd-button-mute');
         draggedParent.classList.remove('dd-zone-mute');
         e.target.appendChild(button);
-        // e.target.appendChild(button);
     }
     
 }
@@ -436,7 +417,6 @@ const reinit = () => {
     scoreCount = 0;
 
     quizQuestion.textContent = "What Capital City does this Picture belong to?";
-
     
     summaryMenu.classList.add('hide');
     dragDropWrapper.textContent = '';

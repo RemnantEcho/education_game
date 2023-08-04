@@ -20,10 +20,10 @@ app.get("/", (req, res) => {
 
 app.get("/flags", (req, res) =>  {
     let amount = parseInt(req.query.amount);
-    if (isNaN(amount) || amount <= 0) res.status(406);
-    
+    if (isNaN(amount) || amount <= 0) res.status(406).send('Error: Invalid Input');
+
     if (amount > flags.length) {
-        resstatus(200).send(flags);
+        res.status(200).send(flags);
     }
     else {
         let shuffledArray = flags
@@ -36,7 +36,7 @@ app.get("/flags", (req, res) =>  {
 
 app.get("/capitals", (req, res) =>  {
     let amount = parseInt(req.query.amount);
-    if (isNaN(amount) || amount <= 0) res.status(406);
+    if (isNaN(amount) || amount <= 0) res.status(406).send('Error: Invalid Input');
 
     if (amount > capitals.length) {
         res.status(200).send(capitals);
@@ -53,7 +53,7 @@ app.get("/capitals", (req, res) =>  {
 
 app.get("/history", (req, res) =>  {
     let amount = parseInt(req.query.amount);
-    if (isNaN(amount) || amount <= 0) res.status(406);
+    if (isNaN(amount) || amount <= 0) res.status(406).send('Error: Invalid Input');
     if (amount > history.length) {
         res.status(200).send(capitals);
     }

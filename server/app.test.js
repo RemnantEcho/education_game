@@ -15,6 +15,14 @@ describe("GET /flags", () => {
         const res = await request(app).get("/flags?amount=0");
 
         expect(res.statusCode).toBe(406);
+        expect(res.text).toEqual('Error: Invalid Input');
+    });
+
+    test("If amount is not Valid", async () => {
+        const res = await request(app).get("/flags?amount=as");
+
+        expect(res.statusCode).toBe(406);
+        expect(res.text).toEqual('Error: Invalid Input');
     });
 });
 
@@ -26,6 +34,12 @@ describe('GET /capitals', () => {
         expect(res.body.length).toBe(10);
     });
     
+    test("If amount is not Valid", async () => {
+        const res = await request(app).get("/capitals?amount=0");
+
+        expect(res.statusCode).toBe(406);
+        expect(res.text).toEqual('Error: Invalid Input');
+    });
 });
 
 describe('GET /history', () => {
@@ -36,6 +50,12 @@ describe('GET /history', () => {
         expect(res.body.length).toBe(10);
     });
     
+    test("If amount is not Valid", async () => {
+        const res = await request(app).get("/history?amount=0");
+
+        expect(res.statusCode).toBe(406);
+        expect(res.text).toEqual('Error: Invalid Input');
+    });
 });
 
 
@@ -49,7 +69,7 @@ describe('GET /messages', () => {
 });
 
 describe('POST /messages', () => {
-    test("Return 10 flags to Client", async () => {
+    test("Sending Message data", async () => {
         const message = {
             "date": "07/21/2023",
             "fName": "FirstName",
@@ -58,12 +78,12 @@ describe('POST /messages', () => {
             "message": "Message"
         }
 
-        const response = await request()
+        const response = await request(app)
         .post("/messages")
         .send(message)
         .expect(201)
 
-        expect(response.status).toEqual(400);
+        expect(response.status).toEqual(201);
         expect(response.text).toEqual("Message added");
     });
     
