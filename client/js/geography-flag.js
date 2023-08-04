@@ -48,7 +48,7 @@ async function fetchFlags(num) {
     // }
 
     
-    return fetch(`http://localhost:3000/flags?amount=${num}`)
+    return fetch(`https://education-game.onrender.com/flags?amount=${num}`)
       .then((response) => response.json())
       .then((data) => {
         flags = [];
