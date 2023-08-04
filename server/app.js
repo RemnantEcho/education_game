@@ -20,24 +20,26 @@ app.get("/", (req, res) => {
 
 app.get("/flags", (req, res) =>  {
     let amount = parseInt(req.query.amount);
-    
+    if (isNaN(amount) || amount <= 0) res.status(406).send('Error: Invalid Input');
+
     if (amount > flags.length) {
-        res.send(flags);
+        res.status(200).send(flags);
     }
     else {
         let shuffledArray = flags
         .map(value => ({ value, sort: Math.random() }))
         .sort((a, b) => a.sort - b.sort)
         .map(({ value }) => value);
-        res.send(shuffledArray.slice(0, amount));
+        res.status(200).send(shuffledArray.slice(0, amount));
     }
 })
 
 app.get("/capitals", (req, res) =>  {
     let amount = parseInt(req.query.amount);
+    if (isNaN(amount) || amount <= 0) res.status(406).send('Error: Invalid Input');
 
     if (amount > capitals.length) {
-        res.send(capitals);
+        res.status(200).send(capitals);
     }
     else {
         let shuffledArray = capitals
@@ -45,14 +47,15 @@ app.get("/capitals", (req, res) =>  {
         .sort((a, b) => a.sort - b.sort)
         .map(({ value }) => value);
 
-        res.send(shuffledArray.slice(0, amount));
+        res.status(200).send(shuffledArray.slice(0, amount));
     }
 })
 
 app.get("/history", (req, res) =>  {
     let amount = parseInt(req.query.amount);
+    if (isNaN(amount) || amount <= 0) res.status(406).send('Error: Invalid Input');
     if (amount > history.length) {
-        res.send(capitals);
+        res.status(200).send(capitals);
     }
     else {
         let shuffledArray = history
@@ -60,13 +63,8 @@ app.get("/history", (req, res) =>  {
         .sort((a, b) => a.sort - b.sort)
         .map(({ value }) => value);
 
-        res.send(shuffledArray.slice(0, amount));
+        res.status(200).send(shuffledArray.slice(0, amount));
     }
-})
-
-// history page
-app.get("/history", (req,res) => {
-    res.send(history)
 })
 
 
@@ -98,4 +96,5 @@ app.post('/messages', (req, res) => {
         }
     })
 })
+
 module.exports = app;
