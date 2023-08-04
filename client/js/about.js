@@ -55,7 +55,7 @@ function extractMsg(e) {
                     'Content-Type' : 'application/json'
                 },body: jsonObj
             }
-          const res =  await fetch('http://localhost:3000/messages',options) 
+          const res =  await fetch('https://education-game.onrender.com/messages',options) 
           if(res.status == 201) { 
           alert("Message sent successfully!")
         firstName.value = "";
