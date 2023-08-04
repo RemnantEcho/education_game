@@ -277,6 +277,8 @@ form h3 {
 
 #map {
   text-decoration: none;
+  width: 424px;
+  height: 386px;
 }
 
 .default-border {
