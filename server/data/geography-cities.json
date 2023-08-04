@@ -10,7 +10,7 @@
     "capital": "Berlin",
     "image": "https://drive.google.com/uc?export=view&id=1Z31GJDmqjGmXnXDJq1DIAwD8EpV0b5Zn",
     "hint": "The city was divided by a famous wall during the Cold War.",
-    "fact": "This is a fact! Educate yourself."
+    "fact": "Has more museums than average rainy days."
 }, 
 {
     "country": "Netherlands",
@@ -45,7 +45,7 @@
     "capital": "Tokyo",
     "image": "https://drive.google.com/uc?export=view&id=1wjZDEYIsDHqv-Eb-tH1Vl8do7FR1B1AD",
     "hint": "This city is known for its efficient and extensive public transportation system.",
-    "fact": "Tokyo has the world's busiest pedestrian crossing, known as the Shibuya Crossing. "
+    "fact": "An official job in Tokyo is known as 'Oshyia' or pusher in English who actually push people to fit into packed train cars."
 },
 {
     "country": "Canada",
@@ -62,11 +62,11 @@
     "fact": "Wellington is known for its strong winds, and it even has a nickname, 'Windy Wellington.'"
 },
 {
-    "country": "India",
-    "capital": "Bangladesh",
+    "country": "Bangladesh",
+    "capital": "Dhaka",
     "image": "https://drive.google.com/uc?export=view&id=19wbDoZD6mqMJFOdetyDtZCcWbJsnIYYg",
-    "hint": "Home to thethe world's largest river delta",
-    "fact": "The Eiffel Tower in Paris can grow taller during the summer. Due to the expansion of iron when exposed to heat."
+    "hint": "This nation's national language is Bengali.",
+    "fact": "On March 2nd, 1971, the flag of Bangladesh was raised in Dhaka in Dhaka University. In the past, the country was a part of Pakistan."
 },
 {
     "country": "Belgium",
@@ -79,7 +79,7 @@
     "country": "Chile",
     "capital": "Santiago",
     "image": "https://drive.google.com/uc?export=view&id=17PDfdwAtx_TWs9vMoAsNvw1fVVrzb1S9",
-    "hint": " It lies on the canalized Mapocho River",
+    "hint": "It lies on the canalized Mapocho River",
     "fact": "Santiago is home to La Moneda Palace, the presidential palace of Chile. It has a historical significance as it was the site of a pivotal event during the 1973 military coup."
 },
 {
@@ -105,7 +105,7 @@
 },
 {
     "country": "Luxembourg",
-    "capital": "Luxembourg City",
+    "capital": "Luxembourg",
     "image": "https://drive.google.com/uc?export=view&id=1g-wztzqafOHuXzKfV4GcWdHhQJWi0EoL",
     "hint": "A small European country, surrounded by Belgium, France and Germany.",
     "fact": "Luxembourg City is a UNESCO World Heritage Site due to its well-preserved historical fortifications and the Old Quarter."
@@ -176,7 +176,7 @@
 {
     "country": "Sierra Leone",
     "capital": "Freetown",
-    "image": "https://drive.google.com/uc?export=view&id=19eMBJ9DVP0TnmU0lcs--LA_pkY1eCH3q",
+    "image": "https://drive.google.com/uc?export=view&id=1Uio22POro0V_2eS2007nrm56B80zu3kK",
     "hint": "Was founded in 1792 as a settlement for freed slaves and was established by British abolitionists.",
     "fact": "Freetown is home to the Cotton Tree, a large and ancient cotton tree that holds cultural and historical significance for the people of Sierra Leone."
 },

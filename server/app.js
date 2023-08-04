@@ -87,7 +87,7 @@ app.post('/messages', (req, res) => {
     const newMessage = req.body
     
     messages.push(newMessage)
-    fs.writeFile('tmp/messages.json', JSON.stringify(messages), (error) => {
+    fs.writeFile('messages.json', JSON.stringify(messages), (error) => {
         if (error) {
             console.log(error)
             res.status(500).send('Failed to add message')

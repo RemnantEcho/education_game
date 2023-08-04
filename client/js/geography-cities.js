@@ -32,7 +32,7 @@ const urlParam = window.location.search;
 
 const fetchCities = (num) => {
     
-    return fetch(`http://localhost:3000/capitals?amount=${num}`)
+    return fetch(`https://education-game.onrender.com/capitals?amount=${num}`)
       .then((response) => response.json())
       .then((data) => {
         cities = [];

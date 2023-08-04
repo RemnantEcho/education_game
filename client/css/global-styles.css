@@ -18,7 +18,7 @@ nav {
 #nav-left-buttons {
     display: flex;
     justify-items: flex-start;
-    width: 40%;
+    width: 33.33%;
     height: 100%;
     /* background-color: #ddaadd; */
 }
@@ -26,7 +26,7 @@ nav {
 #nav-center {
     display: flex;
     justify-items: center;
-    width: 20%;
+    width: 33.33%;
     height: 100%;
     /* background-color: #99aa55; */
 }
@@ -34,7 +34,7 @@ nav {
 #nav-right-buttons {
     display: flex;
     justify-items: flex-end;
-    width: 40%;
+    width: 33.33%;
     height: 100%;
     flex-direction: row-reverse;
     /* background-color: #763d76; */
@@ -369,6 +369,18 @@ main {
 .history-dropdown-item:hover {
     background-color: #690d17; 
     /* color: #ededed; */
+}
+
+.history-button {
+    background-color: #8e0e1e;
+}
+
+.history-button:hover {
+    background-color: #b63445;
+}
+
+.history-text {
+    color: #8e0e1e;
 }
 
 /* .geography-item:hover {
