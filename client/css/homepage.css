@@ -50,8 +50,8 @@ h2 {
 
 .box {
     border-radius: 10px;
-    width: 400px;
-    height: 225px;
+    max-width: 400px;
+    max-height: 225px;
     display: flex;
     justify-content: center;
     align-items: center;

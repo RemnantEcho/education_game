@@ -33,7 +33,7 @@ const urlParam = window.location.search;
 async function fetchFlags(num) {
     // console.log(num);
     // try {
-    //     const flagData = await fetch(`http://localhost:3000/flags/10`);
+    //     const flagData = await fetch(`https://education-game.onrender.com/flags?10`);
     //     if (flagData.ok) {
     //         const data = await flagData.json();
     //         for (let i = 0; i < data.length; i++) {
@@ -48,7 +48,7 @@ async function fetchFlags(num) {
     // }
 
     
-    return fetch(`http://localhost:3000/flags?amount=${num}`)
+    return fetch(`https://education-game.onrender.com/flags?amount=${num}`)
       .then((response) => response.json())
       .then((data) => {
         flags = [];
